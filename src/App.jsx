@@ -5,7 +5,7 @@ import ProductList from './pages/productlist/ProductList'
 import ProductDetails from './pages/productdetails/ProductDetails'
 import CheckOutPage from './pages/checkout/CheckOutPage'
 import ContactPage from './pages/contact/ContactPage'
-import BlogPage from './pages/blog/BlogPage'
+import BlogPage from './pages/blogpage/BlogPage'
 function App() {
    
 
