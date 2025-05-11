@@ -17,7 +17,6 @@ function App() {
       <Route path="/blog" element={<BlogPage />} />
       <Route path="/checkout" element={<CheckOutPage />} />
       <Route path="/contact" element={<ContactPage />} />
-     
     </Routes>
   )
 }
