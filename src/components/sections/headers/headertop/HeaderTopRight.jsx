@@ -1,27 +1,55 @@
 import React, { useState } from 'react'
+import { FaAngleDown, FaFacebookF, FaInstagram } from 'react-icons/fa';
+import { RiTwitterXLine } from 'react-icons/ri';
+import { Link } from 'react-router-dom';
 
 const HeaderTopRight = () => {
-    const [selectedCountry, setSelectedCountry] = useState(null);
+    const [selectedCountry, setSelectedCountry] = useState( { name: 'United Kingdom', language:'English', value: 'GB', flag: 'https://flagcdn.com/16x12/gb.png' }, );
+    const [selectedCurrency, setSelectedCurrency] = useState(null);
 
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const handleSelect = (country) => {
+        setSelectedCountry(country);
+        setIsOpen(false);
+    }
+    
     // Sample country data  
     const countries = [
-        { name: 'United States', value: 'US', flag: 'https://flagcdn.com/16x12/us.png' },
-        { name: 'Canada', value: 'CA', flag: 'https://flagcdn.com/16x12/ca.png' },
-        { name: 'United Kingdom', value: 'GB', flag: 'https://flagcdn.com/16x12/gb.png' },
-        { name: 'Australia', value: 'AU', flag: 'https://flagcdn.com/16x12/au.png' },
-        { name: 'Germany', value: 'DE', flag: 'https://flagcdn.com/16x12/de.png' },
-        { name: 'France', code: 'FR', flag: 'https://flagcdn.com/16x12/fr.png' },
+        { name: 'United States', language:'English', value: 'US', flag: 'https://flagcdn.com/16x12/us.png' },
+        { name: 'Canada', language:'English', value: 'CA', flag: 'https://flagcdn.com/16x12/ca.png' },
+        { name: 'Australia', language:'English', value: 'AU', flag: 'https://flagcdn.com/16x12/au.png' },
+        { name: 'Germany', language:'German', value: 'DE', flag: 'https://flagcdn.com/16x12/de.png' },
+        { name: 'France', language:'French', value: 'FR', flag: 'https://flagcdn.com/16x12/fr.png' },
     ]
-
+    
+    const currency = [
+        { value: 'USD', name: 'United States Dollar', symbol: '$' },
+        { value: 'CAD', name: 'Canadian Dollar', symbol: '$' },
+        { value: 'GBP', name: 'British Pound Sterling', symbol: '£' },
+        { value: 'AUD', name: 'Australian Dollar', symbol: '$' },
+        { value: 'EUR', name: 'Euro', symbol: '€' },
+    ];
 
 
   return (
     <div className='flex items-center justify-end gap-x-[50px]'>
        <div className="">
-        USD
+            <select name="currency "
+                className='w-[70px] border-none outline-none'
+                value={selectedCurrency?.value}
+                onChange={(e)=>{
+                const currency = currency.find((c) => c.value === e.target.value)
+                setSelectedCurrency(currency)
+                }}>
+                {currency.map((currency, index) => (
+                <option value={currency.value}>{currency.symbol}{currency.value}</option>
+                ))}
+           
+            </select>
+
        </div>
-       <div className="relative after:absolute after:w-[1px] after:h-[32px] after:bg-[#BFBFBF] after:left-[-25px] after:top-[50%] after:-translate-y-[50%] before:absolute before:w-[1px] before:h-[32px] before:bg-[#BFBFBF] before:left-[110px] before:top-[50%] before:-translate-y-[50%]">
+       <div className="relative after:absolute after:w-[1px] after:h-[32px] after:bg-[#BFBFBF] after:left-[-23px] after:top-[50%] after:-translate-y-[50%] before:absolute before:w-[1px] before:h-[32px] before:bg-[#BFBFBF] before:left-[135px] before:top-[50%] before:-translate-y-[50%]">
         <select name="country"
         className='w-[112px] hidden'
             value={selectedCountry?.value}
@@ -30,30 +58,40 @@ const HeaderTopRight = () => {
             setSelectedCountry(country)
         }}>
             {countries.map((country, index) => (
-                <option value={country.value}>{country.name}</option>
+                <option value={country.value}>{country.language}</option>
             ))}
            
         </select>
 
         {/* custom dropdown */}
 
-        <div className='border border-red-500 p-2 cursor-pointer flex items-center'>
+        <div className='w-[120px] p-2 cursor-pointer flex items-center '
+        onClick={() => setIsOpen(!isOpen)}
+        >
             {selectedCountry ? (
                 <>
-                    <img src={selectedCountry.flag} alt={selectedCountry.name} className='w-4 h-4 mr-2' />
-                    {selectedCountry.name}
+                    <img src={selectedCountry.flag} alt={selectedCountry.language} className='w-4 h-4 mr-4' />
+                   <span className='mr-2'>
+                     {selectedCountry.language}
+                    </span>
+                    <FaAngleDown />
                 </>
             ) : (
-                <span>Language</span>
+                <span className='mr-2'>Language<FaAngleDown /></span>
             )}
         </div>
 
         {isOpen && (
             <ul className='absolute w-full border-gray-300 bg-white shadow-lg z-10 mt-1'>
                 {countries.map((country) => (
-                <li>
+                <li
+                key={country.value} 
+                 className='flex items-center gap-2 p-2 cursor-pointer hover:bg-gray-200'
+                onClick={() =>handleSelect(country)}
+                 >
+
                     <img src={country?.flag} alt={country?.name} />
-                    {country?.value}
+                    {country?.language}
                 </li>
             ))}
 
@@ -62,8 +100,18 @@ const HeaderTopRight = () => {
         </div>
 
 
-       <div>
-        Social Media
+       <div className='flex items-center gap-4'>
+        <Link to="https://www.facebook.com/login">
+            <FaFacebookF />
+        </Link>
+        <Link to="https://x.com/login">
+            <RiTwitterXLine />
+        </Link>
+        <Link to="https://www.instagram.com/accounts/login/">
+            <FaInstagram />
+        </Link>
+
+
        </div>
     </div>
   )
