@@ -17,6 +17,7 @@ const HeaderTopRight = () => {
     // Sample country data  
     const countries = [
         { name: 'United States', language:'English', value: 'US', flag: 'https://flagcdn.com/16x12/us.png' },
+        {name: 'United Kingdom', language:'English', value: 'GB', flag: 'https://flagcdn.com/16x12/gb.png' },
         { name: 'Canada', language:'English', value: 'CA', flag: 'https://flagcdn.com/16x12/ca.png' },
         { name: 'Australia', language:'English', value: 'AU', flag: 'https://flagcdn.com/16x12/au.png' },
         { name: 'Germany', language:'German', value: 'DE', flag: 'https://flagcdn.com/16x12/de.png' },
@@ -36,14 +37,14 @@ const HeaderTopRight = () => {
     <div className='flex items-center justify-end gap-x-[50px]'>
        <div className="">
             <select name="currency "
-                className='w-[70px] border-none outline-none'
+                className='w-[70px] border-none'
                 value={selectedCurrency?.value}
                 onChange={(e)=>{
                 const currency = currency.find((c) => c.value === e.target.value)
                 setSelectedCurrency(currency)
                 }}>
                 {currency.map((currency, index) => (
-                <option value={currency.value}>{currency.symbol}{currency.value}</option>
+                <option value={currency.value}>{currency.symbol} {currency.value}</option>
                 ))}
            
             </select>
