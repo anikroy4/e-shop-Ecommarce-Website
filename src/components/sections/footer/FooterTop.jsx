@@ -11,7 +11,7 @@ const FooterTop = () => {
       <p className=' max-w-[475px] font-["Montserrat"] font-normal text-xl leading-[30px] mt-4 mb-5' >Browse our wide selection of electronics and find the perfect promo for you from newsletter.</p>
       <input type="text" placeholder='Enter your email address ...' className='inline-block py-6 pl-6 w-[494px] leading-6 font-["Montserrat"] font-normal text-base border border-solid border-[#BFBFBF] outline-`1' />
       <br/>
-      <Button text="Subscribe"/>
+      <Button text="Subscribe" className="mt-12 "/>
     </Container>
   )
 }
