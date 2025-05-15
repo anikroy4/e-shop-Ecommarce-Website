@@ -1,5 +1,9 @@
 import React from 'react'
 import Container from '../../layers/Container'
+import { FiPhone } from 'react-icons/fi'
+import { Link } from 'react-router-dom'
+import { TbMailOpened } from 'react-icons/tb'
+import { IoLocationOutline } from 'react-icons/io5'
 
 const FooterBottom = () => {
   return (
@@ -7,114 +11,129 @@ const FooterBottom = () => {
     <div className=''>
       <Container>
         <div className="flex">
-          <div className='mr-[182px]'>
+          <div className='mr-[142px]'>
             <img src="images/logo.png" alt="Logo" />
-            <ul className='mt-[158px] flex flex-col gap-3'  >
-              <li>
-                +1 (555) 123-4567
+            <ul className='mt-[158px] flex flex-col gap-3 font-["Montserrat"]'  >
+              <li className='relative pl-6 text-base leading-6 text-[#303030]'>
+               <Link to="tel:+1 (555) 123-4567">
+               <FiPhone className='absolute top-[12%] left-0 text-[#646464]' /> +1 (555) 123-4567
+               </Link> 
               </li>
-              <li>
-                information@eshop.com
+              <li className='relative pl-6 text-base leading-6 text-[#303030]'>
+                <Link to="mailto:information@eshop.com">
+                  <TbMailOpened className='absolute top-[12%] left-0 text-[#646464] w-4'/> information@eshop.com
+                </Link>
               </li>
-              <li>
-                123 Main Street, Suite 105, Anytown USA
+              <li className='relative pl-6 text-base leading-6 text-[#303030]'> 
+                <Link to="https://maps.app.goo.gl/gXf2o4o3fDVQi6mr7" target='_blank' >
+                  <IoLocationOutline className='absolute top-[12%] left-0 text-[#646464] w-4'/> 123 Main Street, Suite 105, Anytown USA
+                </Link>
+                
               </li>
             </ul>
 
           </div>
 
-          <div className='mr-27.5'>
-            <h4 className='font-["poopins"] font-semibold text-xl '>
+          <div className='mr-27.5 text-[#303030]'>
+            <h4 className='font-["poopins"] font-semibold text-xl text-[#303030]'>
               Links
             </h4>
-            <ul className='mt-6 flex flex-col gap-3'  >
+            <ul className='mt-6 flex flex-col gap-3 font-["Montserrat"] '  >
               <li>
-                Products List
+                <Link to="/product-list">
+                  Products List
+                </Link> 
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Order Tracking
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Products Guide
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                Shopping Cart
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Tech Blog
               </li>
             </ul>
           </div>
 
-          <div className='mr-27.5'>
+          <div className='mr-27.5 text-[#303030]'>
             <h4 className='font-["poopins"] font-semibold text-xl '>
               Supports
             </h4>
-            <ul className='mt-6 flex flex-col gap-3'  >
-              <li>
+            <ul className='mt-6 flex flex-col gap-3 font-["Montserrat"]'  >
+              <li className=' text-base leading-6'>
                 About Us
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Privacy Policy
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Return Policy
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                Help Centre
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Store Location
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Careers
               </li>
             </ul>
           </div>
 
-          <div  className='mr-24'>
+          <div  className='mr-24 text-[#303030]'>
             <h4 className='font-["poopins"] font-semibold text-xl '>
               Categories
             </h4>
-            <ul className='mt-6 flex flex-col gap-3'  >
-              <li>
+            <ul className='mt-6 flex flex-col gap-3 font-["Montserrat"] '  >
+              <li className=' text-base leading-6 '>
                 Computers & Tablets
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Mobile Phones & Accessories
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 TV & Home Theater
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                Audio & Headphones
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Cameras & Camcorders
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Gaming Equipment
               </li>
-              <li>
+              <li className=' text-base leading-6'>
                 Home Appliances
               </li>
             </ul>
           </div>
           <div>
-            <div>
-              <h4 className='font-["poopins"] font-semibold text-xl mb-6'>Payments</h4>
+            <div className='text-[#303030] '>
+              <h4 className='font-["poopins"] font-semibold text-xl mb-6 text-[#303030] leading-[30px]' >Payments</h4>
               <img src="images/payment.png" alt="payment" />
 
-              <h4 className='font-["poopins"] font-semibold text-xl mt-[73px]' >Follow US</h4>
-              <ul className='mt-6 flex flex-col gap-3'  >
-               <li>
-                  Twitter
+              <h4 className='font-["poopins"] font-semibold text-xl mt-[73px] leading-[30px] text-[#303030]' >Follow US</h4>
+              <ul className='mt-6 flex flex-col gap-3 font-["Montserrat"]'  >
+               <li className=' text-base leading-6'>
+                  <Link>
+                    Twitter
+                  </Link>
                </li>
-                <li>
-                  Instagram
+                <li className=' text-base leading-6'>
+                  <Link>
+                    Instagram
+                  </Link>
                 </li>
-                <li>
-                  Facebook
+                <li className=' text-base leading-6'>
+                  <Link> 
+                    Facebook
+                  </Link>
                </li>
               </ul>
             </div>
