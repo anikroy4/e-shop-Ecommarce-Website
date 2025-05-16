@@ -1,6 +1,6 @@
 import React from 'react'
 import Banner from '../../components/sections/banner/Banner'
-import Facility from '../../components/sections/facility/Facility.Jsx'
+import Facility from '../../components/sections/facility/Facility.jsx'
 
 
 const Home = () => {
