@@ -55,7 +55,7 @@ const HeaderBottom = () => {
               </li>
 
                 {isCategoryOpen && (
-                  <div className=" absolute z-10 mt-2 bottom-2 w-36 bg-white rounded shadow-lg">
+                  <div className=" absolute z-10 mt-2 top-4 w-36 bg-white rounded shadow-lg">
                       <ul className="py-2 font-['Montserrat'] font-normal text-base leading-6 text-[#606060]">
                         <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 1</li>
                         <li className="px-4 py-2 hover:bg-gray-200 cursor-pointer duration-300">product 2</li>
