@@ -52,7 +52,6 @@ const HeaderBottom = () => {
                   <FaBars onClick={handleCategory} className={`cursor-pointer ${isCategoryOpen && "rotate-90"}`} /> 
                   All Categories
                 </button>
-              </li>
 
                 {isCategoryOpen && (
                   <div className=" absolute z-10 mt-2 top-4 w-36 bg-white rounded shadow-lg">
@@ -65,6 +64,7 @@ const HeaderBottom = () => {
                   </div>
                 )}
                 
+              </li>
 
 
               <li ref={dropdownref} className='relative flex items-center gap-x-4'>
