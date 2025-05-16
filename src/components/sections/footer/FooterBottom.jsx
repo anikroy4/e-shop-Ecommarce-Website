@@ -8,7 +8,7 @@ import { IoLocationOutline } from 'react-icons/io5'
 const FooterBottom = () => {
   return (
     <>
-    <div className=''>
+    <div className='mt-25 mb-20 '>
       <Container>
         <div className="flex">
           <div className='mr-[142px]'>
