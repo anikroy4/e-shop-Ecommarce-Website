@@ -6,7 +6,7 @@ import { RiShareLine, RiStarSFill } from 'react-icons/ri'
 
 const ProductLayout = () => {
   return (
-    <div className='border border-transparent hover:border-[#C3C3C3] duration-300 p-6 group rounded-lg'>
+    <div className='border border-transparent hover:border-[#C3C3C3] duration-300 p-6 group rounded-lg mb-20'>
         <div className='relative'>
             <img src="images/productimage.png" alt="productimage" />
             <div className='bg-[#FF624C] py-[7px] px-5 absolute top-[-8px] right-[-9px] rounded-md font-["Montserrat"] font-bold text-base text-white'>
