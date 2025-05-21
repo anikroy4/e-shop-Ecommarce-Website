@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+
+.slick-prev:before{
+    display: none;
+}
+.slick-next:before{
+    display: none;
+}

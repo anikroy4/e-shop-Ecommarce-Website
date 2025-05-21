@@ -4,15 +4,17 @@ import { IoCartOutline } from 'react-icons/io5'
 import { RiShareLine, RiStarSFill } from 'react-icons/ri'
 
 
-const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount }) => {
+const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle }) => {
     let [ratingValue, setRatingValue]=useState(new Array(+rating).fill(rating))
-    console.log(ratingValue);
+    // console.log(ratingValue);
   return (
-    <div style={{background:bg}} className='border border-transparent hover:border-[#C3C3C3] duration-300 p-6 group rounded-lg mb-20'>
+    <div style={{background:bg}} className='border border-transparent hover:border-[#C3C3C3] duration-300 p-[22px] group rounded-lg mb-20'>
         <div className='relative'>
             <img className="w-full" src="images/productimage.png" alt="productimage" />
             { percentTag &&
-                 <div className='bg-[#FF624C] py-[7px] px-5 absolute top-[-8px] right-[-9px] rounded-full font-["Montserrat"] font-bold text-base text-white'>
+                 <div className={`bg-[#FF624C] flex items-center justify-center  absolute  font-["Montserrat"] font-bold text-base text-white 
+                     ${isCircle ? 'w-[70px] h-[70px] rounded-full top-0 right-0': 'px-5 py-[7px] top-[-8px] right-[-9px]'}
+                 `}>
                 50%
                 </div>
             }
@@ -40,11 +42,12 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                 <span className='text-[#303030] font-["Montserrat"] font-normal text-base'>( {totalRating} )</span>
             </div>
             <p className='font-["Poppins"] font-semibold text-2xl leading-[30px]'>${price}</p>
+
             {stock && 
                 <div className='relative w-full h-[30px] bg-[#ddd] rounded-[25px]'>
-                <div className='w-1/2 h-[30px] bg-[#333] rounded-[25px]'></div>
-                    <p className='absolute top-[50%] left-[47%] -translate-y-[50%] -translate-x-[48%] text-white font-["Montserrat"] font-bold text-sm'>
-                    $ {stockAmount} AVAILABLE</p>
+                <div className='w-1/2 h-[30px] bg-[#333] rounded-[25px] '></div>
+                    <p className='absolute top-[50%] left-[47%] -translate-y-[50%] -translate-x-[48%] text-white font-["Montserrat"] font-bold text-sm uppercase'>
+                    ${stockAmount}available</p>
             </div>
             }
         </div>
