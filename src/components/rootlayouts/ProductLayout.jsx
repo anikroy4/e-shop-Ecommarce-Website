@@ -8,7 +8,7 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
     let [ratingValue, setRatingValue]=useState(new Array(+rating).fill(rating))
     // console.log(ratingValue);
   return (
-    <div style={{background:bg}} className='border border-transparent hover:border-[#C3C3C3] duration-300 p-[22px] group rounded-lg mb-20'>
+    <div style={{background:bg}} className='border border-transparent hover:border-[#C3C3C3] duration-300 p-6 group rounded-lg'>
         <div className='relative'>
             <img className="w-full" src="images/productimage.png" alt="productimage" />
             { percentTag &&
@@ -47,7 +47,7 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                 <div className='relative w-full h-[30px] bg-[#ddd] rounded-[25px]'>
                 <div className='w-1/2 h-[30px] bg-[#333] rounded-[25px] '></div>
                     <p className='absolute top-[50%] left-[47%] -translate-y-[50%] -translate-x-[48%] text-white font-["Montserrat"] font-bold text-sm uppercase'>
-                    ${stockAmount}available</p>
+                    ${stockAmount} available</p>
             </div>
             }
         </div>
