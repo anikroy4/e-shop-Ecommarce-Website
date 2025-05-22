@@ -16,12 +16,10 @@ const HeaderTopRight = () => {
     
     // Sample country data  
     const countries = [
-        { name: 'United States', language:'English', value: 'US', flag: 'https://flagcdn.com/16x12/us.png' },
-        {name: 'United Kingdom', language:'English', value: 'GB', flag: 'https://flagcdn.com/16x12/gb.png' },
-        { name: 'Canada', language:'English', value: 'CA', flag: 'https://flagcdn.com/16x12/ca.png' },
-        { name: 'Australia', language:'English', value: 'AU', flag: 'https://flagcdn.com/16x12/au.png' },
-        { name: 'Germany', language:'German', value: 'DE', flag: 'https://flagcdn.com/16x12/de.png' },
-        { name: 'France', language:'French', value: 'FR', flag: 'https://flagcdn.com/16x12/fr.png' },
+        {name: 'United Kingdom', language:'en', value: 'GB', flag: 'https://flagcdn.com/16x12/gb.png' },
+        {name: 'Bangladesh', language:'bd', value: 'BD', flag: 'https://flagcdn.com/16x12/bd.png' },
+        { name: 'Germany', language:'de', value: 'DE', flag: 'https://flagcdn.com/16x12/de.png' },
+        { name: 'France', language:'fr', value: 'FR', flag: 'https://flagcdn.com/16x12/fr.png' },
     ]
     
     const currency = [
