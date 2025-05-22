@@ -4,6 +4,7 @@ import Facility from '../../components/sections/facility/Facility.jsx'
 import FeaturedProduct from '../../components/featuredproduct/FeaturedProduct.jsx'
 import OfferSection from '../../components/offer/OfferSection.jsx'
 import NewProduct from '../../newproduct/NewProduct.jsx'
+import BestSeller from '../../components/bestseller/BestSeller.jsx'
 
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
       <FeaturedProduct/>
       <OfferSection/>
       <NewProduct/>
+      <BestSeller/>
     </>
   )
 }

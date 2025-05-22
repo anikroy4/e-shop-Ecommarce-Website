@@ -4,7 +4,7 @@ import { IoCartOutline } from 'react-icons/io5'
 import { RiShareLine, RiStarSFill } from 'react-icons/ri'
 
 
-const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle }) => {
+const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount }) => {
     let [ratingValue, setRatingValue]=useState(new Array(+rating).fill(rating))
     // console.log(ratingValue);
   return (
@@ -15,7 +15,7 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                  <div className={`bg-[#FF624C] flex items-center justify-center  absolute  font-["Montserrat"] font-bold text-base text-white 
                      ${isCircle ? 'w-[70px] h-[70px] rounded-full top-0 right-0': 'px-5 py-[7px] top-[-8px] right-[-9px]'}
                  `}>
-                50%
+                {discount}%
                 </div>
             }
             <div className='flex items-center absolute bottom-[6px] left-[47%] translate-x-[-50%] gap-5 scale-0 group-hover:scale-100 duration-400'>
