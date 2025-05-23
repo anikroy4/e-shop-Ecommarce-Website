@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../layers/Container'
-import ProductLayout from '../rootlayouts/ProductLayout'
+import ProductLayout from '../layers/ProductLayout'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import { Link } from 'react-router-dom'
 

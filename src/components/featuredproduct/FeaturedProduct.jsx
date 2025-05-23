@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../layers/Container'
-import ProductLayout from '../rootlayouts/ProductLayout'
+import ProductLayout from '../layers/ProductLayout'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';

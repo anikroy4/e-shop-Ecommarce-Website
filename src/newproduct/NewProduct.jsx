@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../components/layers/Container'
-import ProductLayout from '../components/rootlayouts/ProductLayout'
+import ProductLayout from '../components/layers/ProductLayout'
 import Button from '../components/layers/Button'
 
 
