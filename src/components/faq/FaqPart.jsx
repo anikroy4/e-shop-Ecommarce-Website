@@ -45,7 +45,7 @@ const FaqPart = () => {
 
 
         <Container >
-          <div className='flex justify-between mb-24 py-16 mt-20'>
+          <div className='flex justify-between mb-24 py-16 mt-20 gap-x-33'>
             <div className=' w-[902px]'>
                 {accordianData.map((item, index)=>(
                   <AccordianItem
@@ -61,14 +61,14 @@ const FaqPart = () => {
                   />
                 ))}
             </div>
-            <div>
-             <h3 className='font-semibold text-4xl text-[#303030] mt-[293px] font-["Poppins"] leading-[46px]'>Frequently
+
+            <div className='items-center mt-[140px] '>
+             <h3 className='font-semibold text-4xl text-[#303030]  font-["Poppins"] leading-[46px] '>Frequently
               <br />Asked Questions
               </h3>
-             <p className='font-semibold text-xl text-[#303030] mt-6 mb-16 font-["Poppins"] leading-[46px]'>Questions that get asked the most by our clients. Get any burning questions?</p>
-             <Button text="Ask A Question"/>
+             <p className='font-normal text-xl text-[#303030] mt-6 mb-16 font-["Montserrat"] leading-6 max-w-[392px]' >Questions that get asked the most by our clients. Get any burning questions?</p>
+             <Button text="Ask A Question" />
             </div>
-
           </div>
         </Container>
       </div>
