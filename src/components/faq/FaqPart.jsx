@@ -62,11 +62,11 @@ const FaqPart = () => {
                 ))}
             </div>
 
-            <div className='items-center mt-[140px] '>
-             <h3 className='font-semibold text-4xl text-[#303030]  font-["Poppins"] leading-[46px] '>Frequently
+            <div className='items-center pt-[295px] '>
+             <h3 className='font-semibold text-4xl text-[#303030] pb-5 font-["Poppins"] leading-[46px] '>Frequently
               <br />Asked Questions
               </h3>
-             <p className='font-normal text-xl text-[#303030] mt-6 mb-16 font-["Montserrat"] leading-6 max-w-[392px]' >Questions that get asked the most by our clients. Get any burning questions?</p>
+             <p className='font-normal text-xl text-[#303030] mt-8 mb-17 font-["Montserrat"] leading-6 max-w-[392px]' >Questions that get asked the most by our clients. Get any burning questions?</p>
              <Button text="Ask A Question" />
             </div>
           </div>
