@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const FooterLower = () => {
   return (
     <div className='border  border-[#CBCBCB]'>
-      <Container className="flex justify-between mt-2 text-[#646464] text-sm font-['Montserrat'] font-normal leading-5">
+      <Container className="flex justify-between mt-2 mb-20 text-[#646464] text-sm font-['Montserrat'] font-normal leading-5">
       <div className=''>
         Copyright © 2023 E-Shop. All Rights Reserved.
       </div>

@@ -5,6 +5,7 @@ import Container from '../layers/Container'
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import AccordianItem from './AccordianItem'
 import Button from '../layers/Button'
+import FaqIcon from '../../icon/FaqIcon'
 
 const FaqPart = () => {
 
@@ -41,7 +42,7 @@ const FaqPart = () => {
     // }
   ]
   return (
-      <div className='bg-red-500 'style={{background:"url('images/faqbg.png')"}}>
+      <div className='bg-[#F4F4F4]'>
 
 
         <Container >
@@ -62,12 +63,16 @@ const FaqPart = () => {
                 ))}
             </div>
 
-            <div className='items-center pt-[295px] '>
+            <div className='items-center pt-[295px] relative '>
+
              <h3 className='font-semibold text-4xl text-[#303030] pb-5 font-["Poppins"] leading-[46px] '>Frequently
               <br />Asked Questions
               </h3>
              <p className='font-normal text-xl text-[#303030] mt-8 mb-17 font-["Montserrat"] leading-6 max-w-[392px]' >Questions that get asked the most by our clients. Get any burning questions?</p>
              <Button text="Ask A Question" />
+             <div className='absolute top-0 right-0'>
+                <FaqIcon/>
+             </div>
             </div>
           </div>
         </Container>
