@@ -18,9 +18,9 @@ const Home = () => {
       <FeaturedProduct/>
       <OfferSection/>
       <NewProduct/>
+      <SpringSale/>
       <BestSeller/>
       <FaqPart />
-      <SpringSale/>
     </>
   )
 }

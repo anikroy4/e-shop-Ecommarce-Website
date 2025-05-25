@@ -47,7 +47,7 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                 <div className='relative w-full h-[30px] bg-[#ddd] rounded-[25px]'>
                 <div className='w-1/2 h-[30px] bg-[#333] rounded-[25px] '></div>
                     <p className='absolute top-[50%] left-[47%] -translate-y-[50%] -translate-x-[48%] text-white font-["Montserrat"] font-bold text-sm uppercase'>
-                    ${stockAmount} available</p>
+                    {stockAmount} available</p>
             </div>
             }
         </div>
