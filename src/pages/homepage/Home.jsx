@@ -6,6 +6,7 @@ import OfferSection from '../../components/offer/OfferSection.jsx'
 import NewProduct from '../../newproduct/NewProduct.jsx'
 import BestSeller from '../../components/bestseller/BestSeller.jsx'
 import FaqPart from '../../components/faq/FaqPart.jsx'
+import SpringSale from '../../components/springsale/SpringSale.jsx'
 
 
 
@@ -19,6 +20,7 @@ const Home = () => {
       <NewProduct/>
       <BestSeller/>
       <FaqPart />
+      <SpringSale/>
     </>
   )
 }
