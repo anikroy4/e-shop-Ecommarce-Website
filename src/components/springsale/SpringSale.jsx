@@ -89,48 +89,40 @@ const SpringSale = () => {
 
   return (
     <div className='bg-[#F4F4F4] pb-16 pt-16'>
-        <Container className='' >
-            <div className='flex justify-between '>
-                <div className='relative '>
-                    <h1 className='pt-[171px] font-["Poppins"] text-[64px] font-bold leading-16'>Spring Sale</h1>
-                    <div className='mt-10 text-[#FF624C] font-["Poppins"] font-bold text-4xl justify-between leading-[46px]'>
-                        <span className='mr-8'>{timeLeft.days}</span>: 
-                        <span className='ml-[25px] mr-[25px]'>{timeLeft.hours}</span> : 
-                        <span className='ml-[25px] mr-[25px]'>{timeLeft.minutes}</span> : 
-                        <span className=' ml-8'>{timeLeft.seconds}</span>  <br />
-                        <div className='flex text-[#303030] text-base items-center leading-6 font-normal font-["Montserrat"]'>
-                            <span className='mr-14'>Days</span>
-                            <span className='mr-[58px]'>Hours</span>
-                            <span className='mr-16'>Minutes</span>
-                            <span>Seconds</span>
-                        </div>
-                    </div>
-                    <Button className="mt-[72px]" text="Shop Now"/>
-                    <div className='absolute left-0 bottom-0'>
-                        <SpringsaleImageicon/>
-                    </div>
+      <Container className='' >
+          <div className='flex justify-between '>
+            <div className='relative '>
+                <h1 className='pt-[171px] font-["Poppins"] text-[64px] font-bold leading-16'>Spring Sale</h1>
+                <div className='mt-10 text-[#FF624C] font-["Poppins"] font-bold text-4xl justify-between leading-[46px]'>
+                  <span className='mr-8'>{timeLeft.days}</span>: 
+                  <span className='ml-[25px] mr-[25px]'>{timeLeft.hours}</span> : 
+                  <span className='ml-[25px] mr-[25px]'>{timeLeft.minutes}</span> : 
+                  <span className=' ml-8'>{timeLeft.seconds}</span>  <br />
+
+                  <div className='flex text-[#303030] text-base items-center leading-6 font-normal font-["Montserrat"]'>
+                          <span className='mr-14'>Days</span>
+                          <span className='mr-[58px]'>Hours</span>
+                          <span className='mr-16'>Minutes</span>
+                          <span>Seconds</span>
+                  </div>
                 </div>
-                
-        
-        
-                <div className=' max-w-[902px]'>
-                    <Slider {...settings}>
-
-                        <ProductLayout percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="transparent" stock={true} stockAmount="50" isCircle={true}/>
-                        <ProductLayout percentTag={true} discount="30" category="Laptop" title="S21 Laptop Ultra HD LED Screen Feature 2023..." totalRating="100" rating="5" price="1,199.00" border={true} bg="transparent" stock={true} stockAmount="50" isCircle={true}/>
-                        <ProductLayout percentTag={true} discount="45" category="camera" title="Mini Polaroid Camera for Girls with Flash Li..." totalRating="70" rating="5" price="79.00" border={true} bg="transparent" stock={true} stockAmount="500" isCircle={true}/>
-                        <ProductLayout percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="transparent" stock={true} stockAmount="300" isCircle={true}/>
-                        <ProductLayout percentTag={false} discount="47"  category="television" title="AG OLED65CXPUA 4K Smart OLED TV New ..." totalRating="20" rating="4" price="2,799.00" border={true} bg="transparent" stock={true} stockAmount="80" isCircle={true}/>
-
-
-                    </Slider>
-
-
+                <Button className="mt-[72px]" text="Shop Now"/>
+                <div className='absolute left-0 bottom-0'>
+                    <SpringsaleImageicon/>
                 </div>
-        
-
             </div>
-        </Container>
+              
+            <div className=' max-w-[902px]'>
+              <Slider {...settings}>
+                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="#EAEAEA" stock={true} stockAmount="50" isCircle={true}/>
+                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="30" category="Laptop" title="S21 Laptop Ultra HD LED Screen Feature 2023..." totalRating="100" rating="5" price="1,199.00" border={true} bg="#EAEAEA" stock={true} stockAmount="50" isCircle={true}/>
+                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="45" category="camera" title="Mini Polaroid Camera for Girls with Flash Li..." totalRating="70" rating="5" price="79.00" border={true} bg="#EAEAEA" stock={true} stockAmount="500" isCircle={true}/>
+                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="#EAEAEA" stock={true} stockAmount="300" isCircle={true}/>
+                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={false} discount="47"  category="television" title="AG OLED65CXPUA 4K Smart OLED TV New ..." totalRating="20" rating="4" price="2,799.00" border={true} bg="#EAEAEA" stock={true} stockAmount="80" isCircle={true}/>
+              </Slider>
+            </div>
+          </div>
+      </Container>
     </div>
   )
 }

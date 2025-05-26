@@ -4,12 +4,12 @@ import { IoCartOutline } from 'react-icons/io5'
 import { RiShareLine, RiStarSFill } from 'react-icons/ri'
 
 
-const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount }) => {
+const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className}) => {
     let [ratingValue, setRatingValue]=useState(new Array(+rating).fill(rating))
     // console.log(ratingValue);
   return (
-    <div style={{background:bg}} className='border border-transparent hover:border-[#C3C3C3] duration-300 p-6 group rounded-lg'>
-        <div className='relative'>
+    <div style={{background:bg}} className={`border border-transparent hover:border-[#C3C3C3] duration-300 p-6 group rounded-lg ${className}`}>
+        <div className='relative  '>
             <img className="w-full" src="images/productimage.png" alt="productimage" />
             { percentTag &&
                  <div className={`bg-[#FF624C] flex items-center justify-center  absolute  font-["Montserrat"] font-bold text-base text-white 
@@ -41,10 +41,10 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                
                 <span className='text-[#303030] font-["Montserrat"] font-normal text-base'>( {totalRating} )</span>
             </div>
-            <p className='font-["Poppins"] font-semibold text-2xl leading-[30px]'>${price}</p>
+            <p className='font-["Poppins"] font-semibold text-2xl leading-[30px] '>${price}</p>
 
             {stock && 
-                <div className='relative w-full h-[30px] bg-[#ddd] rounded-[25px]'>
+                <div className='relative w-full h-[30px] bg-[#ddd] rounded-[25px] mt-8'>
                 <div className='w-1/2 h-[30px] bg-[#333] rounded-[25px] '></div>
                     <p className='absolute top-[50%] left-[47%] -translate-y-[50%] -translate-x-[48%] text-white font-["Montserrat"] font-bold text-sm uppercase'>
                     {stockAmount} available</p>

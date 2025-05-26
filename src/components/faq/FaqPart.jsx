@@ -1,8 +1,5 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
-import ProductLayout from '../layers/ProductLayout'
+import { useState } from 'react'
 import Container from '../layers/Container'
-import { HiOutlineArrowNarrowRight } from 'react-icons/hi'
 import AccordianItem from './AccordianItem'
 import Button from '../layers/Button'
 import FaqIcon from '../../icon/FaqIcon'
@@ -46,7 +43,7 @@ const FaqPart = () => {
 
 
         <Container >
-          <div className='flex justify-between mb-24 py-16 mt-20 gap-x-33'>
+          <div className='flex justify-between pb-24  pt-20 gap-x-33'>
             <div className=' w-[902px]'>
                 {accordianData.map((item, index)=>(
                   <AccordianItem
@@ -65,10 +62,10 @@ const FaqPart = () => {
 
             <div className='items-center pt-[295px] relative '>
 
-             <h3 className='font-semibold text-4xl text-[#303030] pb-5 font-["Poppins"] leading-[46px] '>Frequently
+             <h3 className='font-semibold text-4xl text-[#303030] pb-6 font-["Poppins"] leading-[46px] '>Frequently
               <br />Asked Questions
               </h3>
-             <p className='font-normal text-xl text-[#303030] mt-8 mb-17 font-["Montserrat"] leading-6 max-w-[392px]' >Questions that get asked the most by our clients. Get any burning questions?</p>
+             <p className='font-normal text-xl text-[#303030]  mb-16 font-["Montserrat"] leading-6 max-w-[392px]' >Questions that get asked the most by our clients. Get any burning questions?</p>
              <Button text="Ask A Question" />
              <div className='absolute top-0 right-0'>
                 <FaqIcon/>
