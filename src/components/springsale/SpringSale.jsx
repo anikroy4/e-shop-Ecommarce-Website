@@ -51,12 +51,11 @@ const SpringSale = () => {
         }
 
         return{
-            days: Math.floor(difference/(1000*60*60*24)),
-            hours: Math.floor((difference%(1000*60*60*24))/(100*60*60)),
-            minutes: Math.floor((difference%(1000*60*60))/(100*60)),
-            seconds: Math.floor((difference%(1000*60))/100),
+          days: Math.floor(difference/(1000*60*60*24)),
+          hours: Math.floor((difference%(1000*60*60*24))/(1000*60*60)),
+          minutes: Math.floor((difference%(1000*60*60))/(1000*60)),
+          seconds: Math.floor((difference%(1000*60))/1000),
         }
-
     }
 
     useEffect(()=>{
@@ -94,15 +93,15 @@ const SpringSale = () => {
             <div className='relative '>
                 <h1 className='pt-[171px] font-["Poppins"] text-[64px] font-bold leading-16'>Spring Sale</h1>
                 <div className='mt-10 text-[#FF624C] font-["Poppins"] font-bold text-4xl justify-between leading-[46px]'>
-                  <span className='mr-8'>{timeLeft.days}</span>: 
-                  <span className='ml-[25px] mr-[25px]'>{timeLeft.hours}</span> : 
-                  <span className='ml-[25px] mr-[25px]'>{timeLeft.minutes}</span> : 
+                  <span className='mr-[30px]'>0{timeLeft.days}</span>: 
+                  <span className='ml-[30px] mr-[30px]'>{timeLeft.hours}</span> : 
+                  <span className='ml-[30px] mr-[30px]'>{timeLeft.minutes}</span> : 
                   <span className=' ml-8'>{timeLeft.seconds}</span>  <br />
 
                   <div className='flex text-[#303030] text-base items-center leading-6 font-normal font-["Montserrat"]'>
-                          <span className='mr-14'>Days</span>
+                          <span className='mr-[62px]'>Days</span>
                           <span className='mr-[58px]'>Hours</span>
-                          <span className='mr-16'>Minutes</span>
+                          <span className='mr-[58px]'>Minutes</span>
                           <span>Seconds</span>
                   </div>
                 </div>
