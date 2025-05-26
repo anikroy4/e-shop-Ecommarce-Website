@@ -42,8 +42,8 @@ const FaqPart = () => {
       <div className='bg-[#F4F4F4]'>
 
 
-        <Container >
-          <div className='flex justify-between pb-24  pt-20 gap-x-33'>
+        <Container className="pb-24  pt-20" >
+          <div className='flex justify-between  gap-x-33'>
             <div className=' w-[902px]'>
                 {accordianData.map((item, index)=>(
                   <AccordianItem

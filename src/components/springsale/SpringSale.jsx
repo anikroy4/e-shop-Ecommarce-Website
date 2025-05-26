@@ -23,18 +23,18 @@ function SampleNextArrow(props) {
   );
 }
 
-function SamplePrevArrow(props) {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={className}
-      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100"}}
-      onClick={onClick}
-    >
-      <FaAngleLeft />
-    </div>
-  );
-}
+// function SamplePrevArrow(props) {
+//   const { className, style, onClick } = props;
+//   return (
+//     <div
+//       className={className}
+//       style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100"}}
+//       onClick={onClick}
+//     >
+//       <FaAngleLeft />
+//     </div>
+//   );
+// }
 
 
 const SpringSale = () => {
@@ -79,7 +79,7 @@ const SpringSale = () => {
     slidesToShow: 2,
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    // prevArrow: <SamplePrevArrow />,
     // autoplay: true,
     autoplayspeed: 1500,
   };
