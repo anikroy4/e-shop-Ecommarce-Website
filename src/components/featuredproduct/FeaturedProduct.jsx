@@ -13,7 +13,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030"}}
+      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030", right:"-39px"}}
       onClick={onClick}
     >
       <FaAngleRight />
@@ -26,7 +26,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100",
+      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100", left:"-39px",
         
       }}
       onClick={onClick}
@@ -48,7 +48,7 @@ const FeaturedProduct = () => {
     nextArrow: <SampleNextArrow />,
     prevArrow: <SamplePrevArrow />,
     autoplay: true,
-    autoplayspeed: 1500,
+    autoplaySpeed: 1500,
 
 
   };
@@ -68,8 +68,7 @@ const FeaturedProduct = () => {
         </p>
           </Link>
       </div>
-      <Slider className=''
-      {...settings}>
+      <Slider {...settings}>
 
         <ProductLayout percentTag={false} category="Laptop" title="JPhone 13 High Quality Value Buy Best Cam..." totalRating="50" rating="5" price="999.00" border={true} bg="transparent" stock={false} stockAmount="" isCircle={false}/>
         <ProductLayout percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="transparent" stock={false} stockAmount="" isCircle={false}/>
