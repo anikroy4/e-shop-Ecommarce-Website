@@ -26,7 +26,9 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100"}}
+      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100",
+        
+      }}
       onClick={onClick}
     >
       <FaAngleLeft />
@@ -53,7 +55,7 @@ const FeaturedProduct = () => {
 
 
   return (
-    <Container>
+    <Container >
       <div className='flex items-center justify-between mb-24'>
         {/* <h4 className='mb-18 font-["Poppins"] text-3xl font-semibold text-[#303030] leading-[46px] not-italic'>
           Featured Products
@@ -66,7 +68,8 @@ const FeaturedProduct = () => {
         </p>
           </Link>
       </div>
-      <Slider {...settings}>
+      <Slider className=''
+      {...settings}>
 
         <ProductLayout percentTag={false} category="Laptop" title="JPhone 13 High Quality Value Buy Best Cam..." totalRating="50" rating="5" price="999.00" border={true} bg="transparent" stock={false} stockAmount="" isCircle={false}/>
         <ProductLayout percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="transparent" stock={false} stockAmount="" isCircle={false}/>
