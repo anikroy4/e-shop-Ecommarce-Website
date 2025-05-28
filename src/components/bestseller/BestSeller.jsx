@@ -19,7 +19,7 @@ const BestSeller = () => {
                 </h4> */}
                 <h2 className=' font-["Poppins"] text-4xl font-semibold text-[#303030] leading-[46px] not-italic '>Best Sellers</h2>
                 <div className='flex items-center justify-end gap-4  text-[#FF624C] ' >
-                     <p className='flex items-center justify-end gap-x-4 text-[#303030] hover:text-[#FF624C] font-bold font-["Montserrat"] text-base leading-6'> 
+                     <p className='flex items-center justify-end gap-x-4 text-[#FF624C] font-bold font-["Montserrat"] text-base leading-6'> 
                         View All
                         <span className='text-2xl'><HiOutlineArrowNarrowRight /> </span>
                     </p>

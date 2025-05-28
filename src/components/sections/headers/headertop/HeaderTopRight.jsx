@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
-import { FaAngleDown, FaFacebookF, FaInstagram } from 'react-icons/fa';
-import { RiTwitterXLine } from 'react-icons/ri';
+import { FaAngleDown  } from 'react-icons/fa';
+import FaceBookIcon from "../../../../icon/socialmediaicons/FaceBookIcon"
+import TwitterIcon from "../../../../icon/socialmediaicons/TwitterIcon"
+import InstagramIcon from "../../../../icon/socialmediaicons/InstagramIcon"
+
 import { Link } from 'react-router-dom';
 
 const HeaderTopRight = () => {
@@ -101,13 +104,13 @@ const HeaderTopRight = () => {
 
        <div className='flex items-center gap-4'>
         <Link to="https://www.facebook.com/login">
-            <FaFacebookF />
+            <FaceBookIcon/>
         </Link>
         <Link to="https://x.com/login">
-            <RiTwitterXLine />
+            <TwitterIcon/>
         </Link>
         <Link to="https://www.instagram.com/accounts/login/">
-            <FaInstagram />
+            <InstagramIcon/>
         </Link>
 
 

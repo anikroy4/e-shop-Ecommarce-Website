@@ -49,7 +49,7 @@ const HeaderBottom = () => {
             <ul className='flex items-center gap-x-20 font-["Montserrat"] text-base font-bold leading-6 text-white'>
               <li ref={categoryref} className='relative ' >
                 <button onClick={handleCategory} className=' flex items-center gap-x-4'>
-                  <FaBars onClick={handleCategory} className={`cursor-pointer ${isCategoryOpen && "rotate-90"}`} /> 
+                  <FaBars onClick={handleCategory} className={`cursor-pointer ${isCategoryOpen}`} /> 
                   All Categories
                 </button>
 

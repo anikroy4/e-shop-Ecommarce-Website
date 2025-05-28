@@ -5,9 +5,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Button from '../layers/Button'
 import SpringsaleImageicon from '../../icon/SpringsaleImageicon'
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa'
+
 import Slider from 'react-slick'
 import { useEffect, useState } from 'react';
+import { IoIosArrowForward } from 'react-icons/io';
 
 
 function SampleNextArrow(props) {
@@ -18,23 +19,11 @@ function SampleNextArrow(props) {
       style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030"}}
       onClick={onClick}
     >
-      <FaAngleRight />
+      <IoIosArrowForward/>
     </div>
   );
 }
 
-// function SamplePrevArrow(props) {
-//   const { className, style, onClick } = props;
-//   return (
-//     <div
-//       className={className}
-//       style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100"}}
-//       onClick={onClick}
-//     >
-//       <FaAngleLeft />
-//     </div>
-//   );
-// }
 
 
 const SpringSale = () => {
@@ -92,11 +81,13 @@ const SpringSale = () => {
           <div className='flex justify-between '>
             <div className='relative '>
                 <h1 className='pt-[171px] font-["Poppins"] text-[64px] font-bold leading-16'>Spring Sale</h1>
-                <div className='mt-10 text-[#FF624C] font-["Poppins"] font-bold text-4xl justify-between leading-[46px]'>
-                  <span className='mr-[30px]'>0{timeLeft.days}</span>: 
-                  <span className='ml-[30px] mr-[30px]'>{timeLeft.hours}</span> : 
-                  <span className='ml-[30px] mr-[30px]'>{timeLeft.minutes}</span> : 
-                  <span className=' ml-8'>{timeLeft.seconds}</span>  <br />
+                <div className='mt-10 text-[#FF624C] font-["Poppins"] font-bold text-4xl justify-between leading-[46px] items-center'>
+                  {/* {timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days} */}
+                  <span className='mr-[30px]'>{timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}</span>: 
+                  <span className='ml-[30px] mr-[30px]'>{timeLeft.hours < 10 ? `0${timeLeft.hours}`: timeLeft.hours}</span> : 
+                  <span className='ml-[30px] mr-[30px]'>{timeLeft.minutes < 10 ? `0${timeLeft.minutes}`: timeLeft.minutes}</span> : 
+                  <span className=' ml-8'>{timeLeft.seconds < 10 ? `0${timeLeft.seconds}`: timeLeft.seconds}</span>
+                  <br />
 
                   <div className='flex text-[#303030] text-base items-center leading-6 font-normal font-["Montserrat"]'>
                           <span className='mr-[62px]'>Days</span>

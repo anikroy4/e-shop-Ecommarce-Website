@@ -4,9 +4,9 @@ import ProductLayout from '../layers/ProductLayout'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import { Link } from 'react-router-dom';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
       style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"16px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030", right:"-40px" ,fontStyle:"regular",}}
       onClick={onClick}
     >
-      <FaAngleRight />
+      <IoIosArrowForward/>
     </div>
   );
 }
@@ -31,7 +31,7 @@ function SamplePrevArrow(props) {
       }}
       onClick={onClick}
     >
-      <FaAngleLeft />
+      <IoIosArrowBack />
     </div>
   );
 }

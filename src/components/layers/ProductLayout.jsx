@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { FaRegHeart } from 'react-icons/fa'
 import { IoCartOutline } from 'react-icons/io5'
 import { RiShareLine, RiStarSFill } from 'react-icons/ri'
 import HeartIcon from '../../icon/HeartIcon'
