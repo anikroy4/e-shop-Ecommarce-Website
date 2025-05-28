@@ -13,7 +13,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030", right:"-40px" ,}}
+      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"16px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030", right:"-40px" ,fontStyle:"regular",}}
       onClick={onClick}
     >
       <FaAngleRight />
@@ -26,7 +26,7 @@ function SamplePrevArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100", left:"-40px", 
+      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"16px", color:"#303030", borderRadius:"50%", display:"flex",  justifyContent:"center", alignItems:"center", border:"1px solid #303030", zIndex:"100", left:"-40px",fontStyle:"regular",
         
       }}
       onClick={onClick}
@@ -62,7 +62,7 @@ const FeaturedProduct = () => {
         </h4> */}
         <h2 className=' font-["Poppins"] text-4xl font-semibold text-[#303030] leading-[46px] not-italic '>Featured Products</h2>
           <Link to="#">
-          <p className='flex items-center justify-end gap-x-4 text-[#303030] hover:text-[#FF624C] font-bold font-["Montserrat"] text-base leading-6'> 
+          <p className='flex items-center justify-end gap-x-4 text-[#FF624C] font-bold font-["Montserrat"] text-base leading-6'> 
           View All
          <span className='text-2xl'><HiOutlineArrowNarrowRight /> </span>
         </p>

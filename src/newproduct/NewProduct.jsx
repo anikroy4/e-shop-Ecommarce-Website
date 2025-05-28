@@ -10,15 +10,13 @@ const NewProduct = () => {
   return (
     <Container>
       <div className='flex items-center justify-between mb-24 mt-20'>
-        {/* <h4 className='mb-18 font-["Poppins"] text-3xl font-semibold text-[#303030] leading-[46px] not-italic'>
-          Featured Products
-        </h4> */}
-        <h2 className=' font-["Poppins"] text-4xl font-semibold text-[#303030] leading-[46px] not-italic '>New Products</h2>
+        
+        <h4 className=' font-["Poppins"] text-4xl font-semibold text-[#303030] leading-[46px] not-italic '>New Products</h4>
           <div className='flex items-center justify-end gap-2  text-[#FF624C] ' >
            <p className=' font-["Montserrat"] text-base font-b leading-6 text-[#303030]'> 
             Sort By</p>
-            <select name="" id="" className='font-["Montserrat"] text-base leading-6'>
-                <option value="">All Categories</option>
+            <select name="" id="" className='font-["Montserrat"] text-base leading-6 ml-20'>
+                <option value="" >All Categories </option>
                 <option value="">Laptop</option>
                 <option value="">Camera</option>
                 <option value="">Audio</option>

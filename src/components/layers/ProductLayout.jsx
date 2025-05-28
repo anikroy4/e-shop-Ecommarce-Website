@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { FaRegHeart } from 'react-icons/fa'
 import { IoCartOutline } from 'react-icons/io5'
 import { RiShareLine, RiStarSFill } from 'react-icons/ri'
+import HeartIcon from '../../icon/HeartIcon'
 
 
 const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className}) => {
@@ -23,9 +24,10 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                     <IoCartOutline />
                 </div>
                 <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
-                    <FaRegHeart />
+                    <HeartIcon  />
+                    {/* <img src="../../../public/images/heartIcon.svg" alt="hearticon" className='hover:text-white' /> */}
                 </div>
-                <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
+                <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:!text-white duration-400 cursor-pointer'>
                     <RiShareLine />
                 </div>
             </div>
@@ -41,7 +43,7 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                
                 <span className='text-[#303030] font-["Montserrat"] font-normal text-base'>( {totalRating} )</span>
             </div>
-            <p className='font-["Poppins"] font-semibold text-2xl leading-[30px] '>${price}</p>
+            <p className='font-["Poppins"] font-semibold text-2xl leading-[30px] group-hover:text-[#FF624C] '>${price}</p>
 
             {stock && 
                 <div className='relative w-full h-[30px] bg-[#ddd] rounded-[25px] mt-8'>

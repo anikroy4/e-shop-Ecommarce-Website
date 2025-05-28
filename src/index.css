@@ -7,3 +7,6 @@
 .slick-next:before{
     display: none;
 }
+.icon:hover path{
+    color:"white"
+}
