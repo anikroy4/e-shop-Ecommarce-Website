@@ -68,7 +68,7 @@ const FeaturedProduct = () => {
         </p>
           </Link>
       </div>
-      <div className='max-w-[1442px]'>
+      <div className='w-[1442px] mx-auto'>
         <Slider {...settings}>
 
           <ProductLayout percentTag={false} category="Laptop" title="JPhone 13 High Quality Value Buy Best Cam..." totalRating="50" rating="5" price="999.00" border={true} bg="transparent" stock={false} stockAmount="" isCircle={false}/>
