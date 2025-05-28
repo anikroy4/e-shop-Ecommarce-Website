@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, width:"40px", height:"40px", background: "transparent", fontSize:"20px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030"}}
+      style={{ ...style, width:"72px", height:"72px", background: "#F4F4F4", fontSize:"28.8px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030", right:"-16px"}}
       onClick={onClick}
     >
       <IoIosArrowForward/>
@@ -104,11 +104,11 @@ const SpringSale = () => {
               
             <div className=' max-w-[902px]'>
               <Slider {...settings}>
-                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="#EAEAEA" stock={true} stockAmount="50" isCircle={true}/>
-                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="30" category="Laptop" title="S21 Laptop Ultra HD LED Screen Feature 2023..." totalRating="100" rating="5" price="1,199.00" border={true} bg="#EAEAEA" stock={true} stockAmount="50" isCircle={true}/>
-                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="45" category="camera" title="Mini Polaroid Camera for Girls with Flash Li..." totalRating="70" rating="5" price="79.00" border={true} bg="#EAEAEA" stock={true} stockAmount="500" isCircle={true}/>
-                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="#EAEAEA" stock={true} stockAmount="300" isCircle={true}/>
-                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={false} discount="47"  category="television" title="AG OLED65CXPUA 4K Smart OLED TV New ..." totalRating="20" rating="4" price="2,799.00" border={true} bg="#EAEAEA" stock={true} stockAmount="80" isCircle={true}/>
+                <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="#EAEAEA" stock={true} changePadding='40px' stockAmount="50" isCircle={true}/>
+                <ProductLayout changePadding='40px' className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="30" category="Laptop" title="S21 Laptop Ultra HD LED Screen Feature 2023..." totalRating="100" rating="5" price="1,199.00" border={true} bg="#EAEAEA" stock={true} stockAmount="50" isCircle={true}/>
+                <ProductLayout changePadding='40px' className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="45" category="camera" title="Mini Polaroid Camera for Girls with Flash Li..." totalRating="70" rating="5" price="79.00" border={true} bg="#EAEAEA" stock={true} stockAmount="500" isCircle={true}/>
+                <ProductLayout changePadding='40px' className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="#EAEAEA" stock={true} stockAmount="300" isCircle={true}/>
+                <ProductLayout changePadding='40px' className="hover:!bg-[#ffff] mr-6" percentTag={false} discount="47"  category="television" title="AG OLED65CXPUA 4K Smart OLED TV New ..." totalRating="20" rating="4" price="2,799.00" border={true} bg="#EAEAEA" stock={true} stockAmount="80" isCircle={true}/>
               </Slider>
             </div>
           </div>

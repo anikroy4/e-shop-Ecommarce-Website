@@ -4,11 +4,11 @@ import { RiShareLine, RiStarSFill } from 'react-icons/ri'
 import HeartIcon from '../../icon/HeartIcon'
 
 
-const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className}) => {
+const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className, changePadding="24px"}) => {
     let [ratingValue, setRatingValue]=useState(new Array(+rating).fill(rating))
     // console.log(ratingValue);
   return (
-    <div style={{background:bg}} className={`border border-transparent hover:border-[#C3C3C3] duration-300 p-6 group rounded-lg ${className}`}>
+    <div style={{background:bg, padding:changePadding}} className={`border border-transparent hover:border-[#C3C3C3] duration-300  group rounded-lg ${className}`}>
         <div className='relative  '>
             <img className="w-full" src="images/productimage.png" alt="productimage" />
             { percentTag &&
