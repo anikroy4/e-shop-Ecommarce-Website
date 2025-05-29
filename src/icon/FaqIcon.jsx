@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FaqIcon = () => {
+const FaqIcon = ({className}) => {
   return (
     <>
-        <svg width="150" height="120" viewBox="0 0 150 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg className={className} width="150" height="120" viewBox="0 0 150 120" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="7.5" cy="7.5" r="7.5" fill="white"/>
             <circle cx="52.5" cy="7.5" r="7.5" fill="white"/>
             <circle cx="97.5" cy="7.5" r="7.5" fill="white"/>
