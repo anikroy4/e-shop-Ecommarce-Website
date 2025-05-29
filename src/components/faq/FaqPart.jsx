@@ -60,15 +60,17 @@ const FaqPart = () => {
                 ))}
             </div>
 
-            <div className='items-center pt-[295px] relative '>
-
-             <h3 className='font-semibold text-4xl text-[#303030] pb-6 font-["Poppins"] leading-[46px] '>Frequently
-              <br />Asked Questions
-              </h3>
-             <p className='font-normal text-xl text-[#303030]  mb-16 font-["Montserrat"] leading-6 max-w-[392px]' >Questions that get asked the most by our clients. Get any burning questions?</p>
-             <Button text="Ask A Question" />
-             <div className='absolute top-0 right-0'>
-                <FaqIcon/>
+            <div className='flex items-end '>
+             <div className=''>
+                  <div className=' flex justify-end translate-y-[-64px]'>
+                  <FaqIcon/>
+                  </div>
+                <h3 className='font-semibold text-4xl text-[#303030] pb-6 font-["Poppins"] leading-[46px] '>Frequently
+                <br />Asked Questions
+                </h3>
+              <p className='font-normal text-xl text-[#303030]  mb-16 font-["Montserrat"] leading-6 max-w-[392px]' >Questions that get asked the most by our clients. Get any burning questions?</p>
+              <Button text="Ask A Question" />
+              
              </div>
             </div>
           </div>
