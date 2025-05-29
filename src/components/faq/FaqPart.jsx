@@ -41,7 +41,7 @@ const FaqPart = () => {
   return (
        <div className="mt-16 py-16 bg-[#F4F4F4]">
                 <Container>
-                    <div className="flex  items-end relative gap-x-[112px]">
+                    <div className="flex justify-between items-end relative">
                         <div className="w-[902px] ">
                             {
                                 accordianData.map((item,index)=>(
@@ -56,9 +56,9 @@ const FaqPart = () => {
                                 ))
                             }
                         </div>
-                        <div className=""> 
-                            <FaqIcon className='absolute top-0 right-0 '/>
-                            <h3 className='max-w-[317px] font-["Poppins"] font-semibold text-4xl leading-[46px] text-[#303030] mt-44'>Frequently Asked Questions</h3>
+                        <div className="w-[544px]"> 
+                            <FaqIcon className='absolute top-[18px] right-0 '/>
+                            <h3 className='max-w-[317px] font-["Poppins"] font-semibold text-4xl leading-[46px] text-[#303030] mt-[173px]'>Frequently Asked Questions</h3>
                             <p className={`max-w-[395px] font-["Montserrat"] font-normal leading-[30px] text-xl text-[#303030] mt-6 mb-16`}>
                                 Questions that get asked the most by our clients. Get any burning questions?
                             </p>
