@@ -12,7 +12,7 @@ const AccordianItem = ({title, content,onToggle, isOpen , className}) => {
             {title}
         </button>
        { isOpen &&
-        <div className='pt-[16px] pb-9 font-["Montserrat"] font-normal text-xl leading-[30px] text-[#646464]'>
+        <div className='w-[755px] pt-[16px] pb-9 font-["Montserrat"] font-normal text-xl leading-[30px] text-[#646464]'>
             {content}
         </div>
        

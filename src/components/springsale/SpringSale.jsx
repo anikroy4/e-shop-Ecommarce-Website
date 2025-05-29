@@ -68,7 +68,7 @@ const SpringSale = () => {
     slidesToScroll: 1,
     nextArrow: <SampleNextArrow />,
     // prevArrow: <SamplePrevArrow />,
-    // autoplay: true,
+    autoplay: true,
     autoplayspeed: 1500,
   };
 
@@ -84,14 +84,14 @@ const SpringSale = () => {
                 <div className='mt-10 text-[#FF624C] font-["Poppins"] font-semibold text-4xl justify-between leading-[46px] items-center'>
                   {/* {timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days} */}
                   <span className='mr-6'>{timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}</span>: 
-                  <span className='ml-[26px] mr-[25px]'>{timeLeft.hours < 10 ? `0${timeLeft.hours}`: timeLeft.hours}</span> : 
-                  <span className='ml-8 mr-[33px]'>{timeLeft.minutes < 10 ? `0${timeLeft.minutes}`: timeLeft.minutes}</span> : 
+                  <span className='ml-[26px] mr-[25px]'>{timeLeft.hours < 10 ? `0${timeLeft.hours}`: timeLeft.hours}</span>: 
+                  <span className='ml-8 mr-[33px]'>{timeLeft.minutes < 10 ? `0${timeLeft.minutes}`: timeLeft.minutes}</span>: 
                   <span className=' ml-[41px]'>{timeLeft.seconds < 10 ? `0${timeLeft.seconds}`: timeLeft.seconds}</span>
                   <br />
 
                   <div className='flex text-[#303030] text-base items-center leading-6 font-normal font-["Montserrat"]'>
-                          <span className='mr-[62px]'>Days</span>
-                          <span className='mr-[58px]'>Hours</span>
+                          <span className='mr-[60px]'>Days</span>
+                          <span className='mr-[46px]'>Hours</span>
                           <span className='mr-[58px]'>Minutes</span>
                           <span>Seconds</span>
                   </div>
