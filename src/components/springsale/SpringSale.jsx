@@ -16,7 +16,7 @@ function SampleNextArrow(props) {
   return (
     <div
       className={className}
-      style={{ ...style, width:"72px", height:"72px", background: "#F4F4F4", fontSize:"28.8px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030", right:"-16px"}}
+      style={{ ...style, width:"72px", height:"72px", background: "#F4F4F4", fontSize:"28.8px", color:"#303030", borderRadius:"50%", display:"flex", justifyContent:"center", alignItems:"center", zIndex:"100", border:"1px solid #303030", right:"-16px", }}
       onClick={onClick}
     >
       <IoIosArrowForward/>

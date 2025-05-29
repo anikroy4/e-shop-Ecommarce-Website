@@ -39,22 +39,33 @@ const FooterBottom = () => {
               Links
             </h4>
             <ul className='mt-6 flex flex-col gap-3 font-["Montserrat"] '  >
-              <li>
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
                 <Link to="/product-list">
                   Products List
                 </Link> 
               </li>
-              <li className=' text-base leading-6'>
-                Order Tracking
+              
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Order Tracking
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Products Guide
+              
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Products Guide
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-               Shopping Cart
+             
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Shopping Cart
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Tech Blog
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Tech Blog
+                </Link>  
               </li>
             </ul>
           </div>
@@ -64,23 +75,35 @@ const FooterBottom = () => {
               Supports
             </h4>
             <ul className='mt-6 flex flex-col gap-3 font-["Montserrat"]'  >
-              <li className=' text-base leading-6'>
-                About Us
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  About Us
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Privacy Policy
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Privacy Policy
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Return Policy
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Return Policy
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-               Help Centre
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Help Centre
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Store Location
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Store Location
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Careers
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Careers
+                </Link>
               </li>
             </ul>
           </div>
@@ -90,26 +113,40 @@ const FooterBottom = () => {
               Categories
             </h4>
             <ul className='mt-6 flex flex-col gap-3 font-["Montserrat"] '  >
-              <li className=' text-base leading-6 '>
-                Computers & Tablets
+              <li className=' text-base leading-6 hover:text-[#FF624C] '>
+                <Link>
+                  Computers & Tablets
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Mobile Phones & Accessories
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Mobile Phones & Accessories
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                TV & Home Theater
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  TV & Home Theater
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-               Audio & Headphones
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Audio & Headphones
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Cameras & Camcorders
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Cameras & Camcorders
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Gaming Equipment
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Gaming Equipment
+                </Link>
               </li>
-              <li className=' text-base leading-6'>
-                Home Appliances
+              <li className=' text-base leading-6 hover:text-[#FF624C]'>
+                <Link>
+                  Home Appliances
+                </Link>
               </li>
             </ul>
           </div>
@@ -120,17 +157,17 @@ const FooterBottom = () => {
 
               <h4 className='font-["poopins"] font-semibold text-xl mt-[73px] leading-[30px] text-[#303030]' >Follow US</h4>
               <ul className='mt-6 flex flex-col gap-3 font-["Montserrat"]'  >
-               <li className=' text-base leading-6'>
+               <li className=' text-base leading-6 hover:text-[#FF624C]'>
                   <Link>
                     Twitter
                   </Link>
                </li>
-                <li className=' text-base leading-6'>
+                <li className=' text-base leading-6 hover:text-[#FF624C]'>
                   <Link>
                     Instagram
                   </Link>
                 </li>
-                <li className=' text-base leading-6'>
+                <li className=' text-base leading-6 hover:text-[#FF624C]'>
                   <Link> 
                     Facebook
                   </Link>
