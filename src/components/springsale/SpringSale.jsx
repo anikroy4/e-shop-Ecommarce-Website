@@ -80,13 +80,13 @@ const SpringSale = () => {
       <Container className='' >
           <div className='flex justify-between '>
             <div className='relative '>
-                <h1 className='pt-[171px] font-["Poppins"] text-[64px] font-bold leading-16'>Spring Sale</h1>
-                <div className='mt-10 text-[#FF624C] font-["Poppins"] font-bold text-4xl justify-between leading-[46px] items-center'>
+                <h1 className='pt-[171px] font-["Poppins"]  font-bold leading-17 text-[56px]'>Spring Sale</h1>
+                <div className='mt-10 text-[#FF624C] font-["Poppins"] font-semibold text-4xl justify-between leading-[46px] items-center'>
                   {/* {timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days} */}
-                  <span className='mr-[30px]'>{timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}</span>: 
-                  <span className='ml-[30px] mr-[30px]'>{timeLeft.hours < 10 ? `0${timeLeft.hours}`: timeLeft.hours}</span> : 
-                  <span className='ml-[30px] mr-[30px]'>{timeLeft.minutes < 10 ? `0${timeLeft.minutes}`: timeLeft.minutes}</span> : 
-                  <span className=' ml-8'>{timeLeft.seconds < 10 ? `0${timeLeft.seconds}`: timeLeft.seconds}</span>
+                  <span className='mr-6'>{timeLeft.days < 10 ? `0${timeLeft.days}` : timeLeft.days}</span>: 
+                  <span className='ml-[26px] mr-[25px]'>{timeLeft.hours < 10 ? `0${timeLeft.hours}`: timeLeft.hours}</span> : 
+                  <span className='ml-8 mr-[33px]'>{timeLeft.minutes < 10 ? `0${timeLeft.minutes}`: timeLeft.minutes}</span> : 
+                  <span className=' ml-[41px]'>{timeLeft.seconds < 10 ? `0${timeLeft.seconds}`: timeLeft.seconds}</span>
                   <br />
 
                   <div className='flex text-[#303030] text-base items-center leading-6 font-normal font-["Montserrat"]'>
