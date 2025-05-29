@@ -23,7 +23,7 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                     <IoCartOutline />
                 </div>
                 <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
-                    <HeartIcon  />
+                    <HeartIcon className="hover:text-white" />
                     {/* <img src="../../../public/images/heartIcon.svg" alt="hearticon" className='hover:text-white' /> */}
                 </div>
                 <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:!text-white duration-400 cursor-pointer'>
