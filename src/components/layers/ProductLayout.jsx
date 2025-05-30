@@ -6,7 +6,7 @@ import { FaRegHeart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 
-const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className, changePadding="24px"}) => {
+const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className, changePadding="24px", TextSize="16px"}) => {
     let [ratingValue, setRatingValue]=useState(new Array(+rating).fill(rating))
     // console.log(ratingValue);
   return (
@@ -14,8 +14,8 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
         <div className='relative  '>
             <img className="w-full" src="images/productimage.png" alt="productimage" />
             { percentTag &&
-                 <div className={`bg-[#FF624C] flex items-center justify-center  absolute  font-["Montserrat"] font-bold text-base text-white 
-                     ${isCircle ? 'w-[70px] h-[70px] rounded-full top-0 right-0': 'px-5 py-[7px] top-[-8px] right-[-9px]'}
+                 <div className={`bg-[#FF624C] flex items-center justify-center  absolute   text-[${TextSize}] text-white 
+                     ${isCircle ? `w-[100px] h-[100px] rounded-full top-0 right-0 font-["Poppins "]  font-semibold leading-[30px]`: ' font-["Montserrat"]  font-bold px-5 py-[7px] top-[-8px] right-[-9px] leading-6'}
                  `}>
                 {discount}%
                 </div>
@@ -27,7 +27,7 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                     </div>
                 </Link>
                 <Link to="/wishlist">
-                    <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
+                    <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[22px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
                         <FaRegHeart />
                     </div>
                 </Link>
