@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { Link } from 'react-router-dom'
 import LocationIcon from '../../../../icon/headericon/LocationIcon'
 import TelephoneIcon from '../../../../icon/headericon/TelephoneIcon'
