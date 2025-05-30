@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { IoCartOutline } from 'react-icons/io5'
 import { RiShareLine, RiStarSFill } from 'react-icons/ri'
-import HeartIcon from '../../icon/HeartIcon'
+
+import { FaRegHeart } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 
 const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className, changePadding="24px"}) => {
@@ -19,19 +21,25 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
                 </div>
             }
             <div className='flex items-center absolute bottom-[6px] left-[47%] translate-x-[-50%] gap-5 scale-0 group-hover:scale-100 duration-400'>
-                <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
-                    <IoCartOutline />
-                </div>
-                <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
-                    <HeartIcon />
-                </div>
+                <Link to="/cart">
+                    <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
+                        <IoCartOutline />
+                    </div>
+                </Link>
+                <Link to="/wishlist">
+                    <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:text-white duration-400 cursor-pointer'>
+                        <FaRegHeart />
+                    </div>
+                </Link>
                 {/* <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C]  duration-400 cursor-pointer'>
                     <HeartIcon insideColor='hover:white'/> */}
                     {/* <img src="../../../public/images/heartIcon.svg" alt="hearticon" className='hover:text-white' /> */}
                 {/* </div> */}
-                <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:!text-white duration-400 cursor-pointer'>
-                    <RiShareLine />
-                </div>
+                <Link to="/share">
+                    <div className='w-[50px] h-[50px] rounded-full bg-white border border-[#FF624C] flex items-center justify-center text-[25px] text-[#FF624C] hover:bg-[#FF624C] hover:!text-white duration-400 cursor-pointer'>
+                        <RiShareLine />
+                    </div>
+                </Link>
             </div>
         </div>
         <div>
