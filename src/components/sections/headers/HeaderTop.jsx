@@ -1,4 +1,3 @@
-import React from 'react'
 import Container from '../../layers/Container'
 import HeaderTopLeft from './headertop/HeaderTopLeft'
 import HeaderTopRight from './headertop/HeaderTopRight'

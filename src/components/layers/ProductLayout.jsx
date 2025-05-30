@@ -6,7 +6,7 @@ import { FaRegHeart } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 
 
-const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className, changePadding="24px", TextSize="16px"}) => {
+const ProductLayout = ({percentTag, category, title, totalRating, rating, price, border, bg, stock, stockAmount, isCircle, discount, className, changePadding="24px", TextSize="16px", stockTag="availavle"}) => {
     let [ratingValue, setRatingValue]=useState(new Array(+rating).fill(rating))
     // console.log(ratingValue);
   return (
@@ -57,9 +57,9 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
 
             {stock && 
                 <div className='relative w-full h-[30px] bg-[#ddd] rounded-[25px] mt-8'>
-                <div className='w-1/2 h-[30px] bg-[#333] rounded-[25px] '></div>
+                <div className='w-1/2 h-[30px] bg-[#FF624C] rounded-[25px] '></div>
                     <p className='absolute top-[50%] left-[47%] -translate-y-[50%] -translate-x-[48%] text-white font-["Montserrat"] font-bold text-sm uppercase'>
-                    {stockAmount} available</p>
+                    {stockAmount} {stockTag}</p>
             </div>
             }
         </div>
