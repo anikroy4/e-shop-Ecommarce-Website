@@ -102,7 +102,7 @@ const SpringSale = () => {
                 </div>
             </div>
               
-            <div className=' max-w-[902px]'>
+            <div className=' max-w-[901px]'>
               <Slider {...settings}>
                 <ProductLayout className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="#EAEAEA" stock={true} changePadding='40px' stockAmount="50" isCircle={true}/>
                 <ProductLayout changePadding='40px' TextSize='24px' className="hover:!bg-[#ffff] mr-6" percentTag={true} discount="30" category="Laptop" title="S21 Laptop Ultra HD LED Screen Feature 2023..." totalRating="100" rating="5" price="1,199.00" border={true} bg="#EAEAEA" stock={true} stockAmount="50" isCircle={true}/>
