@@ -27,7 +27,7 @@ const HeaderMiddle = () => {
               </span>
             </div>
             <div className="relative pl-[50px] after:content-[''] after:w-[1px] after:h-[40px] after:bg-[#BFBFBF] after:absolute after:top-[50%] after:left-[-45px] after:-translate-y-1/2">	
-              <div className="absolute top-[10px] left-0 ">
+              <div className="absolute top-[11px] left-0 ">
                 <UserIcon/>
               </div>
               <p className='font-["Montserrat"] font-normal text-base leading-6'>User</p>

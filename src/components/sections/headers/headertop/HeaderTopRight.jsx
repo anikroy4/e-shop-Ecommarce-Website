@@ -35,7 +35,7 @@ const HeaderTopRight = () => {
 
 
   return (
-    <div className='flex items-center justify-end gap-x-[50px]'>
+    <div className='flex items-center justify-end gap-x-[42px]'>
        <div className="">
             <select name="currency "
                 className='w-[70px] border-none'
@@ -67,7 +67,7 @@ const HeaderTopRight = () => {
 
         {/* custom dropdown */}
 
-        <div className='w-[120px] p-2 cursor-pointer flex items-center '
+        <div className='w-[120px] p-2 cursor-pointer flex items-end '
         onClick={() => setIsOpen(!isOpen)}
         >
             {selectedCountry ? (
