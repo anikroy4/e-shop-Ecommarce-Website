@@ -1,8 +1,8 @@
 import React from 'react'
 import Container from '../../layers/Container'
 import { IoMdSearch } from 'react-icons/io'
-import CartIcon from '../../../icon/CartIcon'
-import UserIcon from '../../../icon/UserIcon'
+import CartIcon from '../../../icon/headericon/CartIcon'
+import UserIcon from '../../../icon/headericon/UserIcon'
 
 const HeaderMiddle = () => {
   return (

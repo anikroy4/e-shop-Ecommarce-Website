@@ -31,7 +31,7 @@ const SpringSale = () => {
     const[timeLeft, setTimeLeft]=useState(calculateTimeLeft());
 
     function calculateTimeLeft(){
-        const saleEndDate=new Date("May 31 , 2025 12:00 AM +06").getTime()
+        const saleEndDate=new Date("June 31 , 2025 12:00 AM +06").getTime()
         const now=new Date().getTime();
         const difference=saleEndDate-now;
         
@@ -90,8 +90,8 @@ const SpringSale = () => {
                   <br />
 
                   <div className='flex text-[#303030] text-base items-center leading-6 font-normal font-["Montserrat"]'>
-                          <span className='mr-[60px]'>Days</span>
-                          <span className='mr-[46px]'>Hours</span>
+                          <span className='mr-[62px]'>Days</span>
+                          <span className='mr-[58px]'>Hours</span>
                           <span className='mr-[58px]'>Minutes</span>
                           <span>Seconds</span>
                   </div>

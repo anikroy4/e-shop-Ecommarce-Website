@@ -2,7 +2,7 @@ import { useState } from 'react'
 import Container from '../layers/Container'
 import AccordianItem from './AccordianItem'
 import Button from '../layers/Button'
-import FaqIcon from '../../icon/FaqIcon'
+import FaqIcon from '../../icon/productlayouticon/FaqIcon'
 
 const FaqPart = () => {
 
