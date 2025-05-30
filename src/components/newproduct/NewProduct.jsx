@@ -40,13 +40,11 @@ const NewProduct = () => {
     },[])
 
     let handleIsSelected=(item)=>{
-      console.log(isSelected);
+      // console.log(isSelected);
       setIsSelected(item);
-      setIsDropDownOpen(true)
+      setIsDropDownOpen(false)
       
     }
-
-
 
 
 
@@ -77,11 +75,11 @@ const NewProduct = () => {
               }
 
                  {isDropDownOpen &&(
-                   <ul className='bg-[#fff] text-sm  text-[#303030] right-10 font-["Montserrat"] font-semibold w-[180px] z-999 absolute'>
+                   <ul className='bg-[#fff] text-sm  text-[#303030] right-10 font-["Montserrat"] font-semibold w-[180px] z-999 absolute top-10 shadow-lg rounded-lg '>
 
                     {categories.map((item, index)=>{
-                      return <li onClick={()=> handleIsSelected(item.product)} className={` py-2 px-3 border-b border-[#CBCBCB] cursor-pointer  last:border-b-transparent hover:bg-[#ddd]`}
-                       key={index}> {item.product}</li>
+                      return <li onClick={()=> handleIsSelected(item.name)} className={` py-2 px-3 border-b border-[#CBCBCB] cursor-pointer  last:border-b-transparent hover:bg-[#ddd]`}
+                       key={index}> {item.name}</li>
                     })}
                     {/* <li>product 1</li>
                     <li>product 2</li>
