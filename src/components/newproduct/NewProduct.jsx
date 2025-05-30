@@ -10,12 +10,12 @@ const NewProduct = () => {
 
 
   const categories=[
-    { name: "All Categories", value: "all" },
-    { name: "Watch", value: "watch" },
-    { name: "Tablet", value: "tablet" },
-    { name: "Audio", value: "audio" },
-    { name: "Laptop", value: "laptop" },
-    { name: "Camera", value: "camera" }
+    { name: "All Categories", category: "All" },
+    { name: "Watch", category: "Watch" },
+    { name: "Tablet", category: "Tablet" },
+    { name: "Audio", category: "Audio" },
+    { name: "Laptop", category: "Laptop" },
+    { name: "Camera", category: "Camera" }
   ]
 
     let [isDropDownOpen,setIsDropDownOpen] = useState(false)
@@ -75,10 +75,10 @@ const NewProduct = () => {
               }
 
                  {isDropDownOpen &&(
-                   <ul className='bg-[#fff] text-sm  text-[#303030] right-10 font-["Montserrat"] font-semibold w-[180px] z-999 absolute top-10 shadow-lg rounded-lg '>
+                   <ul className='bg-[#fff] text-sm  text-[#303030] right-0 font-["Montserrat"] font-semibold w-[200px] z-999 absolute top-10 shadow-lg rounded-lg '>
 
                     {categories.map((item, index)=>{
-                      return <li onClick={()=> handleIsSelected(item.name)} className={` py-2 px-3 border-b border-[#CBCBCB] cursor-pointer  last:border-b-transparent hover:bg-[#ddd]`}
+                      return <li onClick={()=> handleIsSelected(item.category)} className={` py-2 px-3 border-b border-[#CBCBCB] cursor-pointer  last:border-b-transparent hover:bg-[#ddd]`}
                        key={index}> {item.name}</li>
                     })}
                     {/* <li>product 1</li>
