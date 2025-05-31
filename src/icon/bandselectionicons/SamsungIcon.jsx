@@ -1,8 +1,8 @@
 import React from 'react'
 
-const SamsungIcon = () => {
+const SamsungIcon = ({className}) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="137" height="45" viewBox="0 0 137 45" fill="none">
+    <svg className={`${className}`} xmlns="http://www.w3.org/2000/svg" width="137" height="45" viewBox="0 0 137 45" fill="none">
         <g clip-path="url(#clip0_27_299)">
             <path d="M136.915 10.7139C138.781 21.2943 109.665 35.1504 71.8762 41.6615C34.0914 48.1727 1.94755 44.8687 0.0842718 34.2838C-1.7775 23.702 27.3456 9.85035 65.1304 3.34071C102.917 -3.1734 135.055 0.130557 136.915 10.7139Z" fill="#303030"/>
             <path d="M101.352 26.4207L101.158 15.4189H104.664V29.2854H99.6224L96.1232 17.9055H96.0479L96.2421 29.2854H92.7578V15.4189H98.018L101.274 26.4207H101.352Z" fill="white"/>

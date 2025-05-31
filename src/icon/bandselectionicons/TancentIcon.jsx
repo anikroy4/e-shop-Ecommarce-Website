@@ -1,8 +1,8 @@
 import React from 'react'
 
-const TancentIcon = () => {
+const TancentIcon = ({className}) => {
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="184" height="25" viewBox="0 0 184 25" fill="none">
+    <svg className={`${className}`} xmlns="http://www.w3.org/2000/svg" width="184" height="25" viewBox="0 0 184 25" fill="none">
         <g clip-path="url(#clip0_27_321)">
             <path d="M119.852 7.76269H114.279L116.471 10.9426H119.296L116.92 24.6173H121.87L124.25 10.9426H130.424L120.676 3.01611L119.852 7.76269Z" fill="#303030"/>
             <path d="M23.1031 0H0.615378L0 3.58096H8.73217L5.0736 24.6163H10.0241L13.6827 3.58096H22.4891L23.1031 0Z" fill="#303030"/>

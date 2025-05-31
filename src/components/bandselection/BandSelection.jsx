@@ -8,39 +8,43 @@ import AmazonIcon from '../../icon/bandselectionicons/AmazonIcon'
 import TancentIcon from '../../icon/bandselectionicons/TancentIcon'
 import SpotifyIcon from '../../icon/bandselectionicons/SpotifyIcon'
 
+
+
+
+
+
 const BandSelection = () => {
 
-  const settings = {
-    dots: false,
+ const settings = {
+    dots: true,
     infinite: true,
-    speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed:1000,
-    arrows: false,
     
   };
 
   return (
-    <Container className='mt-[100px] mb-[100px] items-center '>
-      <Slider {...settings} >
-        <div className="flex justify-center items-center mr-[199px]">
-          <SamsungIcon />
-        </div>
-        <div className="flex justify-center items-center mr-[199px]">
-          <OpenAiIcon />
-        </div>
-        <div className="flex justify-center items-center mr-[199px]">
-          <AmazonIcon />
-        </div>
-        <div className="flex justify-center items-center mr-[199PX]">
-          <TancentIcon />
-        </div>
-        <div className="flex justify-center items-center mr-[199PX]">
-          <SpotifyIcon />
-        </div>
-      </Slider>
+    <Container className='mt-[100px] mb-[100px]  mx-auto'>
+      <div className="mx-auto ">
+        <Slider {...settings} >
+         <div className="flex justify-start items-center ">
+          <img src="images/bandselectionimages/samsung.png" alt="samsung.png" />
+         </div>
+         <div className="flex justify-center items-center">
+          <img src="images/bandselectionimages/samsung.png" alt="samsung.png" />
+         </div>
+         <div className="flex justify-between items-center">
+          <img src="images/bandselectionimages/samsung.png" alt="samsung.png" />
+         </div>
+         <div className="flex justify-between items-center">
+          <img src="images/bandselectionimages/samsung.png" alt="samsung.png" />
+         </div>
+         <div className="flex justify-end items-center">
+          <img src="images/bandselectionimages/samsung.png" alt="samsung.png" />
+         </div>
+         
+        </Slider>
+      </div>
     </Container>
   )
 }
