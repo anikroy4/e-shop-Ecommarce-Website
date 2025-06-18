@@ -20,7 +20,7 @@ return (
       <ProductListCategory/>
 
       <div className='w-[80%]'>
-        <div className='flex gap-1 flex-warp'>
+        <div className='flex gap-1 flex-wrap '>
           {ProductsList.map((item, index) => (
             <div className="w-[24%]" key={index}>
               <ProductLayout percentTag={true} discount="50" category="Audio" title="WH-1000XM4 Wireless Headphones High Qu..." totalRating="120" rating="4" price="118.00" border={true} bg="transparent" stock={false} stockAmount="" isCircle={false}/>
