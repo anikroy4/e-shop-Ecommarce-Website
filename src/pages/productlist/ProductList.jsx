@@ -10,7 +10,7 @@ const ProductList = () => {
 return (
 
   <Container>
-    <div className=' flex justify-between'>
+    <div className=' flex justify-between gap-[26px] mt-16 mb-20'>
       <ProductListCategory/>
       <ProductListContent />
           

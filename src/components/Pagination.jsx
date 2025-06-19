@@ -6,6 +6,7 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
     const maxpagesToShow = 10;
     const pagesToShowBeforeAfter = 3;
     
+    
     let startPage = Math.max(1, currentPage - pagesToShowBeforeAfter);
     let endPage = Math.min(totalPages, currentPage + pagesToShowBeforeAfter);
     
@@ -23,7 +24,9 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
         pageNumbers.push(i);  
     }
     
-    
+
+
+
     return (
     <div className='flex items-center justify-center p-4 w-full '>
         <button 
@@ -54,6 +57,10 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
         </button>
     
 
+
+    <span>
+          Showing {(currentPage - 1) * itemsPerPage + 1}-{Math.min(currentPage * itemsPerPage, totalItems)} of {totalItems} results.
+    </span>
     </div>
   )
 }
