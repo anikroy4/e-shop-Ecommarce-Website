@@ -38,16 +38,16 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
             
         &lt;
         </button>
-        {pageNumbers.map(( number, index) => (
-            <button 
-            key={index}
-            onClick={() => onPageChange(number)}
-            className={`mx-2 px-3 py-1 bg-gray-300 cursor-pointer rounded disabled:opacity-50 hover:bg-gray-300 transition-colors duration-200 ${currentPage === number ? 'active bg-red-500 ' : ''}`}
+        {pageNumbers.map((number, index) => (
+            <button
+                key={index}
+                onClick={() => onPageChange(number)}
+                className={`mx-2 px-3 py-1 cursor-pointer rounded disabled:opacity-50 hover:bg-gray-300 transition-colors duration-200 ${currentPage === number ? 'active bg-[#FF624C] text-[#fff] rounded-[5px]' : 'bg-gray-300'}`}
             >
-            {number}
+                {number}
             </button>
         ))}
-
+       
         <button onClick={()=>onPageChange(currentPage+1)}
             disabled={currentPage === totalPages}
             className='px-3 py-1 bg-gray-200 cursor-pointer rounded disabled:opacity-50 hover:bg-gray-300 transition-colors duration-200'

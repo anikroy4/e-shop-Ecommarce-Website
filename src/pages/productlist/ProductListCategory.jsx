@@ -95,7 +95,7 @@ const ProductListCategory = () => {
                 </div>
 
                 {isDropDownOpen &&        
-                  <ul className={ ` overflow-hidden transition-all`}> 
+                  <ul className={ `overflow-hidden transition-all`}> 
                       {CategoriesList.map((category, selectedIndex) => (
                         <li onClick={()=> handleSelect(selectedIndex)} key={category.id}  className={`${index === index && `click`}  flex cursor-pointer gap-x-2 items-center mt-3`}>
                           <CheckIcon isChecked={index.includes(selectedIndex)}/>
