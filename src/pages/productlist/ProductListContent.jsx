@@ -1,7 +1,6 @@
 import React from 'react'
 import ProductLayout from '../../components/layers/ProductLayout'
 import Pagination from '../../components/Pagination';
-import ProductList from './ProductList';
 import { useState } from 'react';
 
 
@@ -34,7 +33,9 @@ const ProductListContent = () => {
               {Math.min(currentPage * itemsPerPage, productsList.length)} of {productsList.length} results.
             </p>
             <div>
-              hlw
+               <div>
+                 
+               </div>
             </div>
           </div>
         <div>

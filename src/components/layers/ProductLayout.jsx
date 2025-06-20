@@ -10,7 +10,7 @@ const ProductLayout = ({percentTag, category, title, totalRating, rating, price,
     let [ratingValue, setRatingValue]=useState(new Array(+rating).fill(rating))
     // console.log(ratingValue);
   return (
-    <div style={{background:bg, padding:changePadding}} className={`border border-transparent hover:border-[#C3C3C3] duration-300  group rounded-lg ${className}`}>
+    <div style={{background:bg, padding:changePadding}} className={`border border-transparent hover:border-[#CBCBCB] duration-300  group rounded-lg ${className}`}>
         <div className='relative  '>
             <img className="w-full" src="images/productimage.png" alt="productimage" />
             { percentTag &&

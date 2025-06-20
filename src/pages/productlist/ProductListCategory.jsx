@@ -158,7 +158,7 @@ const ProductListCategory = () => {
                         step={10}
                         value={minValue}
                         onChange={(e)=> updateSlider("min",e.target.value)}
-                        className='w-full h-2 bg-transparent pointer-events-none  absolute top-[-2px] appearance-none'
+                        className='w-full h-0.5 bg-transparent pointer-events-none  absolute top-0 appearance-none'
                         style={{zIndex:2}}
                         />
 
@@ -169,7 +169,7 @@ const ProductListCategory = () => {
                         step={10}
                         value={maxValue}
                         onChange={(e)=> updateSlider("max",e.target.value)}
-                        className='w-full h-2 bg-transparent pointer-events-none absolute top-[-2px] appearance-none'
+                        className='w-full h-0.5 bg-transparent pointer-events-none absolute top-0 appearance-none'
                         style={{zIndex:2}}
                         />
                       </div>

@@ -22,6 +22,7 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
     for (let i = startPage; i <= endPage; i++) {
         
         pageNumbers.push(i);  
+        
     }
     
 
@@ -41,7 +42,7 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
             <button 
             key={index}
             onClick={() => onPageChange(number)}
-            className=' mx-2 px-3 py-1 bg-gray-300 cursor-pointer rounded disabled:opacity-50 hover:bg-gray-300 transition-colors duration-200'
+            className={`mx-2 px-3 py-1 bg-gray-300 cursor-pointer rounded disabled:opacity-50 hover:bg-gray-300 transition-colors duration-200 ${currentPage === number ? 'active bg-red-500 ' : ''}`}
             >
             {number}
             </button>
@@ -56,11 +57,6 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
 
         </button>
     
-
-
-    <span>
-          Showing {(currentPage - 1) * itemsPerPage + 1}-{Math.min(currentPage * itemsPerPage, totalItems)} of {totalItems} results.
-    </span>
     </div>
   )
 }

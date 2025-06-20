@@ -70,7 +70,7 @@ const NewProduct = () => {
                   </div>
                   :
                   <div className='flex items-center gap-x-25 cursor-pointer text-[#FF624C] font-["montserrat"] text-base font-bold leading-6'>
-                    <p>All Categories </p> <span className={`${isDropDownOpen && `rotate-180`}  text-black h-4 w-4`}><IoIosArrowDown/></span>
+                    <p>All Categories</p> <span className={`${isDropDownOpen && `rotate-180`}  text-black h-4 w-4`}><IoIosArrowDown/></span>
                   </div>
               }
 
