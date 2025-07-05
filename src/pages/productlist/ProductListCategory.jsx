@@ -107,6 +107,7 @@ const ProductListCategory = () => {
                 </div>
 
                 <hr className=' text-[#C3C3C3] w-full my-10'/>
+                
                 <div>
                     <div onClick={()=> setIsDropDownOpen2(!isDropDownOpen2)} className=' mb-5 flex items-center justify-between'>
                       <h4 className=' cursor-pointer font-montserrat text-xl text-[#303030] font-bold  leading-7.5'>Brands</h4>
@@ -148,7 +149,7 @@ const ProductListCategory = () => {
                       <div className=' relative w-full h-0.5 bg-[#C3C3C3] rounded'>
                         <div 
                         className={` absolute bg-[#FF624C] rounded h-full`}
-                        style={{left: `${minParcet}%`, width: `${maxParcet - minParcet}%`}}
+                        style={{left: `${minParcet}%`, width: `${(maxParcet - minParcet)>100? 100 : maxParcet - minParcet }%`}}
                         ></div>
 
                         <input 
