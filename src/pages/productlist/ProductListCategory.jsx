@@ -25,7 +25,7 @@ import CheckIcon from '../../icon/CheckIcon'
 
 const ProductListCategory = () => {
 
-    const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   const [isDropDownOpen2, setIsDropDownOpen2] = useState(false);
   const [isDropDownOpen3, setIsDropDownOpen3] = useState(false);
   const [index, setIndex] = useState([]);

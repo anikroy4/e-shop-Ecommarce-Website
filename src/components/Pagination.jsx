@@ -3,30 +3,41 @@ import React from 'react'
 const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
 
     const totalPages = Math.ceil(totalItems / itemsPerPage);
-    const maxpagesToShow = 10;
-    const pagesToShowBeforeAfter = 3;
-    
-    
-    let startPage = Math.max(1, currentPage - pagesToShowBeforeAfter);
-    let endPage = Math.min(totalPages, currentPage + pagesToShowBeforeAfter);
-    
-
-    if (endPage - startPage + 1 < maxpagesToShow) {
-        if (startPage > 1) {
-            startPage = Math.max(1, endPage - maxpagesToShow + 1);
-        }
-        endPage = Math.min(totalPages, startPage + maxpagesToShow - 1);
-    }
+    const maxpagesToShow = 4;
 
     const pageNumbers = [];
-    for (let i = startPage; i <= endPage; i++) {
-        
-        pageNumbers.push(i);  
-        
+
+    if (totalPages <= maxpagesToShow) {
+        for (let i = 0; i <= totalPages; i++) {
+            pageNumbers.push(i);
+        }
     }
+    else {
+        const startPage = [1,2]
+        const endPage = [totalPages-1,totalPages];
+        const middlePages = [ currentPage - 1, currentPage, currentPage + 1].filter((page) => (page > 2 && page < totalPages-1
+        ));
+        
+
+        const uniquePages = Array.from(new Set([...startPage, ...middlePages, ...endPage])).sort((a, b) => a - b);
+        
     
 
+        for (let i = 0; i < uniquePages.length; i++) {
+            
+                pageNumbers.push(uniquePages[i]);
 
+                if (i < uniquePages.length - 1 && uniquePages[i + 1] - uniquePages[i] > 1) {
+                pageNumbers.push('...');
+            }
+
+        }    
+
+    }
+
+    
+
+    
 
     return (
     <div className='flex items-center justify-center p-4 w-full '>
@@ -38,7 +49,15 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
             
         &lt;
         </button>
-        {pageNumbers.map((number, index) => (
+        {pageNumbers.map((number, index) =>
+        
+        number === '...' ? (
+          <span key={`ellipsis-${index}`} className="mx-2 px-3 py-1 bg-gray-300 text-gray-600 rounded">
+            ...
+          </span>
+        ) :
+        
+        (
             <button
                 key={index}
                 onClick={() => onPageChange(number)}
