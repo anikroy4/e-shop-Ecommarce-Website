@@ -1,4 +1,5 @@
 import React from 'react'
+import Arrow from '../icon/Arrow';
 
 const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
 
@@ -44,15 +45,15 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
         <button 
         onClick={()=> onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className='px-3 py-1 bg-gray-300 cursor-pointer rounded disabled:opacity-50 hover:bg-gray-300 transition-colors duration-200'
+        className=' py-[5px] px-[10px] bg-none cursor-pointer rounded disabled:opacity-80 '
         >
             
-        &lt;
+        <Arrow className="rotate-180"/>
         </button>
         {pageNumbers.map((number, index) =>
         
         number === '...' ? (
-          <span key={`ellipsis-${index}`} className="mx-2 px-3 py-1 bg-gray-300 text-gray-600 rounded">
+          <span key={`ellipsis-${index}`} className="mx-7 px-[18px] py-[9px]">
             ...
           </span>
         ) :
@@ -61,7 +62,7 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
             <button
                 key={index}
                 onClick={() => onPageChange(number)}
-                className={`mx-2 px-3 py-1 cursor-pointer rounded disabled:opacity-50 hover:bg-gray-300 transition-colors duration-200 ${currentPage === number ? 'active bg-[#FF624C] text-[#fff] rounded-[5px]' : 'bg-gray-300'}`}
+                className={`mx-7 px-[18px] py-[9px] text-xl font-semibold leading-7.5  font-["Poppins"] cursor-pointer rounded disabled:opacity-50 transition-colors duration-200 ${currentPage === number ? 'active bg-[#FF624C] text-[#fff] rounded-[5px]' : 'bg-none text-[#303030] rounded-[5px]'}`}
             >
                 {number}
             </button>
@@ -69,10 +70,10 @@ const Pagination = ({totalItems, itemsPerPage, currentPage,onPageChange}) => {
        
         <button onClick={()=>onPageChange(currentPage+1)}
             disabled={currentPage === totalPages}
-            className='px-3 py-1 bg-gray-200 cursor-pointer rounded disabled:opacity-50 hover:bg-gray-300 transition-colors duration-200'
+            className='py-[5px] px-[10px] bg-none cursor-pointer rounded disabled:opacity-80'
         >
             
-        &gt;
+        <Arrow />
 
         </button>
     
