@@ -3,6 +3,7 @@ import Container from '../../components/layers/Container'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import EnlargeIcon from '../../icon/EnlargeIcon';
 
 const ProductDetails = () => {
   const [nav1, setNav1] = useState(null);
@@ -30,6 +31,11 @@ const ProductDetails = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
   };
+  let handleClick = () => {
+    
+    
+    
+  }
 
   return (
     <>
@@ -45,8 +51,9 @@ const ProductDetails = () => {
           <div className='w-[49%]'>
             <Slider asNavFor={nav2} ref={slider => (sliderRef1 = slider)} {...settings} >
               <div>
-                <div>
-                  <img src="images/banner.png" alt="banner.png" />
+                <div className='relative'>
+                  <img className='' src="images/banner.png" alt="banner.png" />
+                  <EnlargeIcon onClick={handleClick} className="absolute top-[4%] right-[2%] " textColor='white'/>
                 </div>
               </div>
               <div>
