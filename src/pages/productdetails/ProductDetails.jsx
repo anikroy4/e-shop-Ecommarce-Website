@@ -1,13 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Container from '../../components/layers/Container'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import EnlargeIcon from '../../icon/EnlargeIcon';
+import { MdCloseFullscreen } from 'react-icons/md';
 
 const ProductDetails = () => {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
+  const [isactive, setActive] = useState(false);
   let sliderRef1 = useRef(null);
   let sliderRef2 = useRef(null);
 
@@ -32,6 +34,7 @@ const ProductDetails = () => {
     slidesToScroll: 1,
   };
   let handleClick = () => {
+    setActive(!isactive);
     
     
     
@@ -119,6 +122,13 @@ const ProductDetails = () => {
           </div>
           <div className='w-[49%]'>right</div>
         </div>
+        {isactive &&
+        
+        <div className='fixed top-0 left-0 w-full h-screen bg-[rgba(0,0,0,.5)]  flex items-center justify-center'>
+          <MdCloseFullscreen  className="text-white absolute top-[10px] right-[10px]" onClick={()=>setActive(false)}/>
+          <img src="images/banner.png" alt="banner.png" />
+        </div>
+        }
       </Container>
     </>
   )
