@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { use, useEffect, useRef, useState } from 'react'
 import Container from '../../components/layers/Container'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -6,12 +6,19 @@ import Slider from "react-slick";
 import EnlargeIcon from '../../icon/EnlargeIcon';
 import { MdCloseFullscreen } from 'react-icons/md';
 import { RiStarSFill } from 'react-icons/ri';
+import ReturnIcon from '../../icon/facilityicon/ReturnIcon';
+import DeliveryIcon from '../../icon/facilityicon/DeliveryIcon';
+import SecurityIcon from '../../icon/facilityicon/SecurityIcon';
+import MinusIcon from '../../icon/productdetailSection/MinusIcon';
+import PlusIcon from '../../icon/productdetailSection/PlusIcon';
+import CartIcon from '../../icon/productdetailSection/CartIcon';
 
 const ProductDetails = () => {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   const [isactive, setActive] = useState(false);
   const [isImage, setImage] = useState(" ");
+  let [quantity, setQuantity]= useState(0);
   let sliderRef1 = useRef(null);
   let sliderRef2 = useRef(null);
 
@@ -37,12 +44,28 @@ const ProductDetails = () => {
     slidesToShow: 5,
     slidesToScroll: 1,
   };
+
+
   let handleClick = (url) => {
     setActive(!isactive);
     setImage(url);
     
     
     
+  }
+
+
+
+  let quantityHandleClick=(type)=>{
+    if(type=="minus"){
+     if(quantity>0){
+       quantity--;
+      setQuantity(quantity)
+      }
+    }else{
+      quantity++;
+      setQuantity(quantity)
+    }
   }
 
   return (
@@ -56,7 +79,7 @@ const ProductDetails = () => {
         </div>
 
         <div className='flex justify-between gap-x-14'>
-          <div className='w-[50%] '>
+          <div className='w-[50%]  '>
             <Slider asNavFor={nav2} ref={slider => (sliderRef1 = slider)} {...settings} >
               <div>
                 <div className='relative'>
@@ -143,8 +166,8 @@ const ProductDetails = () => {
 
             {/* <hr className='mt-6 text-[#CBCBCB]'/> */}
 
-            <div className='flex items-center gap-x-[18px] mt-6'>
-              <p className='text-[#FF624C] font-bold font-["Poppins"] text-[56px] leading-17'>$2,999.99</p>
+            <div className='flex items-center gap-x-[18px] mt-6 mb-12'>
+              <p className='text-[#FF624C] font-bold font-["Poppins"] text-[56px] leading-17 '>$2,999.99</p>
               <small className='text-[#303030] font-["Montserrat"] font-normal text-xl leading-6'>
                 <del className='text-[#CBCBCB]'>
                   $5,499.99
@@ -189,16 +212,75 @@ const ProductDetails = () => {
                     Variant
                   </li>
                   <li className='font-["Montserrat"] font-semibold text-xl leading-[30px] text-[#303030] flex flex-wrap items-center gap-x-1 gap-y-2'>
-                    <button className='py-4 px-8 border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]'>Off White</button>
-                    <button className='py-4 px-8 border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]'>Space Gray</button>
-                    <button className='py-4 px-8 border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]'>Jet Black</button>
-                    <button className='py-4 px-8 border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]'>Cinnamon Red</button>
+                    <button className='py-[15px] px-[30px] border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030] hover:text-[#FF624C] hover:border-[#FFB0A5]'>Off White</button>
+                    <button className='py-[15px] px-[30px] border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]  hover:text-[#FF624C] hover:border-[#FFB0A5]'>Space Gray</button>
+                    <button className='py-[15px] px-[30px] border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]  hover:text-[#FF624C] hover:border-[#FFB0A5]'>Jet Black</button>
+                    <button disabled className='py-[15px] px-[30px] border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030] disabled:text-[#CBCBCB] disabled:border-[#CBCBCB]  hover:text-[#FF624C] hover:border-[#FFB0A5]'>Cinnamon Red</button>
                   </li>
                </ul>
             </div>
 
           </div>
         </div>
+        <div className='flex  items-center mt-10 mb-20 gap-x-14'>
+
+          <div className='flex w-[50%] items-center gap-x-8'> 
+            <div className='flex justify-between items-center gap-x-3 '>
+                <div>
+                  <DeliveryIcon/>
+                </div>
+                <div className='font-["Montserrat"] text-[#303030]'>
+                  <h4 className=' text-base font-bold leading-6'>Free Shipping</h4>
+                  <p className='text-base font-normal leading-6'>Worldwide available</p>
+                  </div>
+            </div>
+            <div className='flex justify-between items-center gap-x-3'>
+              <div>
+                <SecurityIcon/>
+              </div>
+              <div className='font-["Montserrat"] text-[#303030]'>
+                <h4 className=' text-base font-bold leading-6'>100% Guaranteed</h4>
+                <p className='text-base font-normal leading-6'>Receive product first</p>
+              </div>
+              
+            </div>
+            <div className='flex justify-between items-center gap-x-3 '>
+              <div>
+                <ReturnIcon/>
+              </div>
+              <div className='font-["Montserrat"] text-[#303030]'>
+                <h4 className=' text-base font-bold leading-6'>Return Available</h4>
+                <p className='text-base font-normal leading-6 '>See return policy</p>
+              </div>
+            </div>
+          </div>
+
+          <div className='w-[50%] flex items-center justify-between '>
+            <div className='flex items-center justify-between '>
+              <button onClick={()=>quantityHandleClick('minus')} className=' p-4 rounded-full bg-[#F4F4F4]'>
+                <MinusIcon className='text-[#303030] text-[20px]'/> 
+              </button>
+              <input className='max-w-[194px]  leading-[46px] font-["Poppins"] text-4xl font-semibold text-[#303030] text-center'value={quantity} />
+              <button onClick={()=>quantityHandleClick('plus')} className=' p-4 rounded-full bg-[#F4F4F4]'>
+                <PlusIcon className='text-[#303030] text-[20px] '/>
+              </button>
+            </div>
+            <div className='flex gap-x-4'>
+              <button className='py-4 px-10 font-["Montserrat"] items-center leading-[30px] font-bold text-white text-xl bg-[#FF624C] rounded-[10px]'>Buy Now</button>
+              <button className='p-[17px] border border-solid border-[#FF624C] rounded-[10px] '>
+                <CartIcon className='text-[#FF624C] text-[20px]'/>
+              </button>
+            </div>
+          </div>
+      
+      
+
+
+
+
+        </div>
+
+
         {isactive &&
         
         <div className='fixed top-0 left-0 w-full h-screen bg-[rgba(0,0,0,.5)]  flex items-center justify-center'>
