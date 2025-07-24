@@ -151,6 +151,51 @@ const ProductDetails = () => {
                 </del>
                 </small>
             </div>
+            <div>
+               <ul className='flex gap-x-27 mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[87px]'>
+                    Brand
+                  </li>
+                  <li className='font-["Montserrat"] font-semibold text-xl leading-[30px] text-[#303030]'>
+                    NexSUS Tech Company
+                  </li>
+                </ul>
+               <ul className='flex gap-x-27 mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[87px]'>
+                    Size
+                  </li>
+                  <li className='font-["Montserrat"] font-semibold text-xl leading-[30px] text-[#303030]'>
+                    15.7 x 11.1 x 1.0 inches (W x D x H)
+                  </li>
+                </ul>
+               <ul className='flex gap-x-27 mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[87px]'>
+                    Weight
+                  </li>
+                  <li className='font-["Montserrat"] font-semibold text-xl leading-[30px] text-[#303030]'>
+                    6.28 pounds
+                  </li>
+                </ul>
+               <ul className='flex gap-x-27 mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[87px]'>
+                    Delivery
+                  </li>
+                  <li className='font-["Montserrat"] font-semibold text-xl leading-[30px] text-[#303030]'>
+                    Worldwide
+                  </li>
+               </ul>
+               <ul className='flex gap-x-27 mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[87px]'>
+                    Variant
+                  </li>
+                  <li className='font-["Montserrat"] font-semibold text-xl leading-[30px] text-[#303030] flex flex-wrap items-center gap-x-1 gap-y-2'>
+                    <button className='py-4 px-8 border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]'>Off White</button>
+                    <button className='py-4 px-8 border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]'>Space Gray</button>
+                    <button className='py-4 px-8 border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]'>Jet Black</button>
+                    <button className='py-4 px-8 border border-solid border-[#979797] rounded-[5px] font-["Montserrat"]  text-base leading-6 font-bold  text-[#303030]'>Cinnamon Red</button>
+                  </li>
+               </ul>
+            </div>
 
           </div>
         </div>
