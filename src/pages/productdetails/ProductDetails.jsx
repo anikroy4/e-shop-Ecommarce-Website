@@ -17,12 +17,15 @@ const ProductDetails = () => {
   const [nav1, setNav1] = useState(null);
   const [nav2, setNav2] = useState(null);
   const [isactive, setActive] = useState(false);
+  
   const [isImage, setImage] = useState(" ");
   let [quantity, setQuantity]= useState(0);
   let sliderRef1 = useRef(null);
   let sliderRef2 = useRef(null);
 
-  
+  const [desActive, setDesActive] = useState(true);
+  const [reviewActive, setReviewActive] = useState(false);
+  const [SpecificActive, setSpecificActive] = useState(false);
 
   useEffect(() => {
     setNav1(sliderRef1);
@@ -49,9 +52,6 @@ const ProductDetails = () => {
   let handleClick = (url) => {
     setActive(!isactive);
     setImage(url);
-    
-    
-    
   }
 
 
@@ -67,6 +67,27 @@ const ProductDetails = () => {
       setQuantity(quantity)
     }
   }
+
+
+  let handleDescription = () => {
+    setDesActive(true);
+    setReviewActive(false);
+    setSpecificActive(false);
+  }
+
+  let handleReview = () => {
+    setDesActive(false);
+    setReviewActive(true);
+    setSpecificActive(false);
+  }
+
+  let handleSpecification = () => {
+    setDesActive(false);
+    setReviewActive(false);
+    setSpecificActive(true);
+  }
+
+
 
   return (
     <>
@@ -278,7 +299,156 @@ const ProductDetails = () => {
 
 
 
+        </div>  
+
+        <div >
+          <div className='flex items-center gap-x-[35px] mb-10'>
+            <h4 className={`${desActive && " border-b-2 border-solid border-[#FF624C]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px] text-[#303030] cursor-pointer`} 
+            onClick={handleDescription}>
+              Description
+            </h4>
+            <h4 className={`${SpecificActive && " border-b-2 border-solid border-[#FF624C]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px] text-[#303030] cursor-pointer`} onClick={handleSpecification}>
+              Specification
+            </h4>
+            <h4 className={`${reviewActive && " border-b-2 border-solid border-[#FF624C]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px] text-[#303030] cursor-pointer`} onClick={handleReview}>
+              Reviews
+            </h4>
+          </div>
+          <div className='w-full  bg-[#CBCBCB] mb-10'>
+            {desActive &&
+            <>
+              <h1>Description</h1>
+              <p className='font-["Montserrat"] text-base leading-6 text-[#303030]'>
+              The NexSUS ROCK Strix Scar 17 Gaming Laptop is a high-performance machine designed for gamers and professionals alike. It features a powerful AMD Ryzen 9 processor, NVIDIA GeForce RTX 3080 graphics card, and a stunning 15.7-inch display with a 144Hz refresh rate for smooth visuals. With 1TB SSD storage and 16GB RAM, it offers ample space and speed for demanding applications. The laptop's sleek design is complemented by customizable RGB lighting, making it a stylish choice for any setup. Whether you're gaming, streaming, or working on intensive tasks, the Strix Scar 17 delivers exceptional performance and reliability.
+              This laptop also boasts advanced cooling technology to keep temperatures low during extended gaming sessions. Its ergonomic keyboard ensures comfortable typing, while multiple connectivity options—including USB-C, HDMI, and Wi-Fi 6—provide versatility for all your devices. The long-lasting battery and robust build quality make it ideal for both home and travel use. Experience immersive audio, fast load times, and seamless multitasking with the NexSUS ROCK Strix Scar 17—engineered for those who demand the best in performance and reliability. Whether you're a hardcore gamer, a content creator, or a professional on the go, this laptop is designed to meet your needs with style and power.
+
+              </p>
+            
+            </>
+             }
+
+
+            {reviewActive &&
+            <>
+              <h1>Review</h1>
+              <p className='font-["Montserrat"] text-base leading-6 text-[#303030]'>
+              The NexSUS ROCK Strix Scar 17 Gaming Laptop is a high-performance machine designed .</p>
+            
+            </>
+             }
+
+
+            {SpecificActive &&
+            <div className='flex gap-x-[53px] items-center'>
+              <div>
+                <ul className='flex gap-x-[87px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[101px]'>
+                    Brand
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030]'>
+                    NexSUS Tech Company
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[87px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[101px]'>
+                    Display
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030] w-[531px]'>
+                    17.3-inch Full HD (1920 x 1080) IPS panel, 144Hz refresh rate, 3ms response time, 100% sRGB color gamut, Adaptive-Sync technology, anti-glare
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[87px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[101px]'>
+                    Processor
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030] w-[531px]'>
+                    10th Gen Intel Core i9-10980HK (8 cores, 16 threads, 2.4GHz base clock speed, up to 5.3GHz turbo boost)
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[87px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[101px]'>
+                    Graphics
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030]'>
+                    NVIDIA GeForce RTX 3080 (16GB GDDR6 VRAM)
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[87px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[87px]'>
+                    Memory
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030]'>
+                    32GB DDR4-3200 RAM
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[87px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[87px]'>
+                    Storage
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030]'>
+                    1TB PCIe NVMe M.2 SSD
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <ul className='flex gap-x-[68px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[120px]'>
+                    Audio
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030] w-[560px]'>
+                    2 x 4W speakers with Smart Amp technology
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[68px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[120px]'>
+                    Connection
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030] w-[560px]'>
+                    Wi-Fi 6 (802.11ax), Bluetooth 5.1, Gigabit Ethernet, HDMI 2.0b, USB 3.2 Gen 2 Type-C with DisplayPort 1.4 and Power Delivery, 3 x USB 3.2 Gen 1 Type-A, 3.5mm audio
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[68px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[120px]'>
+                    Keyboard
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030] w-[560px]'>
+                    Backlit Chiclet keyboard, N-key rollover, per-key RGB lighting, Aura Sync technology
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[68px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[120px]'>
+                    Battery
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030] w-[560px]'>
+                    4-cell 90Wh lithium battery (up to 8 hours battery life)
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[68px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[120px]'>
+                    Dimensions
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030] w-[560px]'>
+                    15.7 x 11.1 x 1.0 inches (W x D x H)
+                  </li>
+                </ul>
+                <ul className='flex gap-x-[68px] mb-4'>
+                  <li className='font-["Poppins"] font-semibold text-xl leading-[30px] text-[#303030] w-[120px]'>
+                    Weight
+                  </li>
+                  <li className='font-["Montserrat"] font-normal text-xl leading-[30px] text-[#303030] w-[560px]'>
+                    6.28 pounds
+                  </li>
+                </ul>
+              </div>
+              
+            </div>
+             }
+          </div>
         </div>
+
+
+
+
 
 
         {isactive &&
