@@ -303,21 +303,20 @@ const ProductDetails = () => {
 
         <div >
           <div className='flex items-center gap-x-[35px] mb-10'>
-            <h4 className={`${desActive && " border-b-2 border-solid border-[#FF624C]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px] text-[#303030] cursor-pointer`} 
+            <h4 className={`${desActive ?" border-b-4 border-solid border-[#FF624C] text-[#303030]":"text-[#CBCBCB]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px]   cursor-pointer`} 
             onClick={handleDescription}>
               Description
             </h4>
-            <h4 className={`${SpecificActive && " border-b-2 border-solid border-[#FF624C]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px] text-[#303030] cursor-pointer`} onClick={handleSpecification}>
+            <h4 className={`${SpecificActive ? " border-b-4 border-solid border-[#FF624C] text-[#303030]":"text-[#CBCBCB]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px] cursor-pointer`} onClick={handleSpecification}>
               Specification
             </h4>
-            <h4 className={`${reviewActive && " border-b-2 border-solid border-[#FF624C]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px] text-[#303030] cursor-pointer`} onClick={handleReview}>
+            <h4 className={`${reviewActive ? " border-b-4 border-solid border-[#FF624C] text-[#303030]":"text-[#CBCBCB]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px] cursor-pointer`} onClick={handleReview}>
               Reviews
             </h4>
           </div>
-          <div className='w-full  bg-[#CBCBCB] mb-10'>
+          <div className='w-full  bg-[none] mt-12 mb-'>
             {desActive &&
             <>
-              <h1>Description</h1>
               <p className='font-["Montserrat"] text-base leading-6 text-[#303030]'>
               The NexSUS ROCK Strix Scar 17 Gaming Laptop is a high-performance machine designed for gamers and professionals alike. It features a powerful AMD Ryzen 9 processor, NVIDIA GeForce RTX 3080 graphics card, and a stunning 15.7-inch display with a 144Hz refresh rate for smooth visuals. With 1TB SSD storage and 16GB RAM, it offers ample space and speed for demanding applications. The laptop's sleek design is complemented by customizable RGB lighting, making it a stylish choice for any setup. Whether you're gaming, streaming, or working on intensive tasks, the Strix Scar 17 delivers exceptional performance and reliability.
               This laptop also boasts advanced cooling technology to keep temperatures low during extended gaming sessions. Its ergonomic keyboard ensures comfortable typing, while multiple connectivity options—including USB-C, HDMI, and Wi-Fi 6—provide versatility for all your devices. The long-lasting battery and robust build quality make it ideal for both home and travel use. Experience immersive audio, fast load times, and seamless multitasking with the NexSUS ROCK Strix Scar 17—engineered for those who demand the best in performance and reliability. Whether you're a hardcore gamer, a content creator, or a professional on the go, this laptop is designed to meet your needs with style and power.
@@ -330,9 +329,8 @@ const ProductDetails = () => {
 
             {reviewActive &&
             <>
-              <h1>Review</h1>
               <p className='font-["Montserrat"] text-base leading-6 text-[#303030]'>
-              The NexSUS ROCK Strix Scar 17 Gaming Laptop is a high-performance machine designed .</p>
+              The NexSUS ROCK Strix Scar 17 Gaming Laptop is a high-performance machine designed </p>
             
             </>
              }
