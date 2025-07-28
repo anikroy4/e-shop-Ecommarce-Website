@@ -12,6 +12,7 @@ import SecurityIcon from '../../icon/facilityicon/SecurityIcon';
 import MinusIcon from '../../icon/productdetailSection/MinusIcon';
 import PlusIcon from '../../icon/productdetailSection/PlusIcon';
 import CartIcon from '../../icon/productdetailSection/CartIcon';
+import RecentProducts from '../../components/recentproducts/RecentProducts';
 
 const ProductDetails = () => {
   const [nav1, setNav1] = useState(null);
@@ -301,7 +302,7 @@ const ProductDetails = () => {
 
         </div>  
 
-        <div >
+        <div  className='border-b border-solid border-[#CBCBCB]'>
           <div className='flex items-center gap-x-[35px] mb-10'>
             <h4 className={`${desActive ?" border-b-4 border-solid border-[#FF624C] text-[#303030]":"text-[#CBCBCB]"} pb-2 font-["Poppins"] font-semibold text-2xl leading-[30px]   cursor-pointer`} 
             onClick={handleDescription}>
@@ -314,7 +315,7 @@ const ProductDetails = () => {
               Reviews
             </h4>
           </div>
-          <div className='w-full  bg-[none] mt-12 mb-'>
+          <div className='w-full  bg-[none] mt-12 mb-20'>
             {desActive &&
             <>
               <p className='font-["Montserrat"] text-base leading-6 text-[#303030]'>
@@ -444,7 +445,7 @@ const ProductDetails = () => {
           </div>
         </div>
 
-
+        <RecentProducts/>
 
 
 
