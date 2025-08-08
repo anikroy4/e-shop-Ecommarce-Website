@@ -240,6 +240,7 @@ const CheckOutPage = () => {
           <div className='w-[29%]'>
             <div className='bg-[#F4F4F4] rounded-[25px] pt-10 pb-12 '>
               <h4 className='font-["Poppins"] font-semibold text-2xl leading-[30px] mb-12'>Order Summary</h4>
+              
             </div>
           </div>
 
