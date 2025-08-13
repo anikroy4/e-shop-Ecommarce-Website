@@ -3,7 +3,6 @@ import Container from '../../components/layers/Container'
 import CheckOutBreadcrumb from '../../components/sections/checkout/CheckOutBreadcrumb'
 import Box from '../../components/Box'
 import { FaAngleDown } from 'react-icons/fa'
-import { BsTextarea } from 'react-icons/bs'
 import ChargeIcon from '../../icon/chargeicon'
 
 const CheckOutPage = () => {
