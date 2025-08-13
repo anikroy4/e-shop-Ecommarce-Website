@@ -4,6 +4,7 @@ import CheckOutBreadcrumb from '../../components/sections/checkout/CheckOutBread
 import Box from '../../components/Box'
 import { FaAngleDown } from 'react-icons/fa'
 import { BsTextarea } from 'react-icons/bs'
+import ChargeIcon from '../../icon/chargeicon'
 
 const CheckOutPage = () => {
  let [active, setActive] = useState("Information")
@@ -111,7 +112,7 @@ const CheckOutPage = () => {
         </div>
       </div>
         <div className='flex justify-between'>
-          <div className='w-[69%]'>
+          <div className='w-[66%]'>
             <h4 className='font-["Poppins"] font-bold text-4xl leading-9 mb-10'>Billing Details</h4>
             <div className=' flex flex-wrap gap-x-4 gap-y-8 justify-between'>
               <div className='w-[49%]'>
@@ -232,15 +233,54 @@ const CheckOutPage = () => {
 
 
               <div className='w-full'>
-                <Box inputName={"Order Notes"} placeholder={"Enter your order notes ..."} type='textarea'/>
+                <Box inputName={"Order Notes"} placeholder={"Enter your order notes ..."} type={'textarea'}/>
               </div>
             </div>
                   
           </div>
-          <div className='w-[29%]'>
-            <div className='bg-[#F4F4F4] rounded-[25px] pt-10 pb-12 '>
+          <div className='w-[32%]'>
+            <div className='bg-[#F4F4F4] rounded-[25px] pt-10 pb-12 px-10'>
               <h4 className='font-["Poppins"] font-semibold text-2xl leading-[30px] mb-12'>Order Summary</h4>
-              
+              <div className='flex justify-between border-b border-solid border-[#C3C3C3] pb-6'>
+                <div className='w-[250px] font-["Montserrat"] text-xl font-normal leading-[30px]'>2019 Smart Laptop 256 GB 13 inch Pro Chip Core 1 TB HD SSD</div>
+                <div className='font-["Montserrat"] text-xl font-bold leading-[30px]'>1</div>
+                <div className='font-["Poppins"] text-xl font-semibold leading-[30px]'>$1,659.00</div>
+              </div>
+              <div className='flex justify-between border-b border-solid border-[#C3C3C3] pb-5 pt-5'>
+                <div className='w-[250px] font-["Montserrat"] text-xl font-normal leading-[30px]'>Mobile Watch A Series GPS 7/144 45 mm Red Rubber Band</div>
+                <div className='font-["Montserrat"] text-xl font-bold leading-[30px]'>1</div>
+                <div className='font-["Poppins"] text-xl font-semibold leading-[30px]'>$999.00</div>
+              </div>
+              <div className='flex justify-between border-b border-solid border-[#C3C3C3] pb-5 pt-5'>
+                <div className='w-[250px] font-["Montserrat"] text-xl font-normal leading-[30px]'>Console Game Stick HD Wireless Bluetooth Connect</div>
+                <div className='font-["Montserrat"] text-xl font-bold leading-[30px]'>2</div>
+                <div className='font-["Poppins"] text-xl font-semibold leading-[30px]'>$4,598.00</div>
+              </div>
+              <div className='flex justify-between border-b border-solid border-[#C3C3C3] pb-5 pt-5'>
+                <div className='w-[250px] font-["Montserrat"] text-xl font-normal leading-[30px]'>Console Game Stick HD Wireless Bluetooth Connect</div>
+                <div className='font-["Montserrat"] text-xl font-bold leading-[30px]'>2</div>
+                <div className='font-["Poppins"] text-xl font-semibold leading-[30px]'>$218.00</div>
+              </div>
+              <div className='flex justify-between border-b border-solid border-[#C3C3C3] pb-5 pt-5'>
+                <div className='w-[250px] font-["Montserrat"] text-xl font-normal leading-[30px]'>Mini Tablet Pro 16 inch HD Pencil 128 GB System RAM 28</div>
+                <div className='font-["Montserrat"] text-xl font-bold leading-[30px]'>1</div>
+                <div className='font-["Poppins"] text-xl font-semibold leading-[30px]'>$259.00</div>
+              </div>
+              <div className='flex justify-between pb-5 pt-5'>
+                <div className='flex'>
+                  <p className=' relative font-["Montserrat"] text-xl font-normal leading-[30px] mr-[6px]'>Shipping Fee</p>
+                  <ChargeIcon className='absolute inline-block ' />
+                </div>
+                
+                <div className='font-["Poppins"] text-xl font-semibold leading-[30px]'>$10.00</div>
+              </div>
+              <div className=' bg-white rounded-[10px] py-[24px] px-[16px] mt-6'>
+                  <div className='flex justify-between mb-3 '>
+                    <p className='font-["Montserrat"] text-base font-bold leading-6'>Total</p>
+                    <p className='font-["Montserrat"] text-xl font-bold leading-[30px]'>$4,999.00</p>
+                  </div>
+                  <button className= 'flex font-["Montserrat"] py-6 px-[132px] bg-[#FF624C] text-white text-xl font-normal rounded-[10px] cursor-pointer'>Order Now</button>
+              </div>
             </div>
           </div>
 

@@ -1,10 +1,11 @@
 import React from 'react'
+import Container from '../../components/layers/Container'
 
 const ContactPage = () => {
   return (
-    <div>
-      H1
-    </div>
+    <Container>
+      hi
+    </Container>
   )
 }
 
