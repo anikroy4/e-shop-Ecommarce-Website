@@ -38,12 +38,12 @@ const ContactPage = () => {
             </div>
           </div>
         
-        <div className='mt-[136px] pl-10 py-10 bg-[#F4F4F4] rounded-[25px] w-[30%]'>
+        <div className=' h-[540px] mt-[136px] pl-10 py-10  bg-[#F4F4F4] rounded-[25px] w-[30%]'>
           <h4 className='font-["poppins"] text-2xl font-semibold leading-[30px] mb-4'>Let’s Keep in Touch!</h4>
           <p className='font-["Montserrat"] text-base font-normal leading-[30px] text-[#616161] mb-10'>
             We would love to hear from you. Contact us for any inquiries you might have for us.
           </p>
-          <div className='w-full'>
+          <div className='w-full '>
             <ul className=' flex flex-col gap-3 font-["Montserrat"]'  >
               <li className='text-base leading-6 font-bold text-[#303030]'>
                <Link to="tel:+1 (555) 123-4567">
@@ -62,27 +62,29 @@ const ContactPage = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <h4 className='font-["Montserrat"] text-xl font-bold leading-[30px] mt-[56px  ] mb-4 border-b-[4px] border-[#FF624C] inline-block'>
+          <div className='mt-14 w-full'>
+            <h4 className='font-["Montserrat"] text-xl font-bold leading-[30px] mt-[56px] mb-4 border-b-[4px] border-[#FF624C] inline-block '>
               Opening Hours
             </h4>
-
-            <table>
-              <tr>
-                <td className='font-["Montserrat"] text-base font-bold leading-6 text-[#303030] mr-[6px]'>MON to FRI:</td>
-                <td className='font-["Montserrat"] text-base font-normal leading-[30px] text-[#303030]'>08:00 AM - 04:00 PM</td>      
-              </tr>
-              <tr>
-                <td className='font-["Montserrat"] text-base font-bold leading-6 text-[#303030] mr-[6px]'>
-                  SAT to SUN:
-                </td>
-                <td>
-                  09:00 AM - 03:00 PM
-                </td>
-              </tr>
-            </table>
+            <br />
+                
+            <p4 className='font-["Montserrat"] text-base font-bold leading-6 text-[#303030] mr-[6px]'>
+              MON to FRI:
+            </p4>
+            <span className='font-["Montserrat"] text-base font-normal leading-[30px] text-[#303030]'>
+              08:00 AM - 04:00 PM
+            </span>
+            <br />
+            <p4 className='font-["Montserrat"] text-base font-bold leading-6 text-[#303030] mr-[6px]'>
+              SAT to SUN: 
+            </p4>
+            <span className='font-["Montserrat"] text-base font-normal leading-[30px] text-[#303030]'>
+              09:00 AM - 03:00 PM
+            </span>
+            
           </div>
         </div>
+        
       </div>
 
     </Container>
