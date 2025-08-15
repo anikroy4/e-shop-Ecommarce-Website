@@ -13,29 +13,34 @@ const ContactPage = () => {
       <div className='w-full mt-8 rounded-[10px] mb-16'>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3021.984440099766!2d-73.83626211063829!3d40.76236696076263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2600feab8eaf3%3A0xf2c8bcc288c78f3!2s123%20Main%20St%2C%20Queens%2C%20NY%2010001%2C%20USA!5e0!3m2!1sen!2sbd!4v1755104677257!5m2!1sen!2sbd" width="100%" height="450"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
-      <div className='w-full flex justify-between gap-x-14'>
-          <div className='w-[70%] flex flex-wrap gap-x-[15px] gap-y-12'>
-            <div>
-              <ContactBreadcrumb/>
-              <h2 className='font-["poppins"] text-4xl font-semibold  mb-3 leading-[46px] '>
-                Contact Us
-              </h2>
-              <p className='font-["Montserrat"] text-xl font-normal text-[#303030] mb-6'>
-                Have any questions for us? Don’t hesitate to contact us.
-              </p>
+      <div className='w-full flex justify-between gap-x-14 mb-20'>
+          <div className='w-[70%]'>
+            <div className=' flex flex-wrap gap-x-[15px] gap-y-12'>
+              <div className='w-full'>
+                <ContactBreadcrumb/>
+                <h2 className='font-["poppins"] text-4xl font-semibold  mb-3 leading-[46px] '>
+                  Contact Us
+                </h2>
+                <p className='font-["Montserrat"] text-xl font-normal text-[#303030] mb-6'>
+                  Have any questions for us? Don’t hesitate to contact us.
+                </p>
+              </div>
+              <div className='w-full'>
+                <Box inputName={'Name'} placeholder={'Amelia Robert Watson'}/>
+              </div>
+              <div className='w-[49%]'>
+                <Box inputName={'Phone Number'} placeholder={'+123 456 7890'}/>
+              </div>
+              <div className='w-[49%]'>
+                <Box inputName={'Email Address'} placeholder={'amelia.watson@eshop.com'}/>
+              </div>
+              <div className='w-full'>
+                <Box inputName={'Message'} placeholder={'Enter your message ...'} type={'textarea'}/>
+              </div>
             </div>
-            <div className='w-full'>
-              <Box inputName={'Name'} placeholder={'Amelia Robert Watson'}/>
-            </div>
-            <div className='w-[49%]'>
-              <Box inputName={'Phone Number'} placeholder={'+123 456 7890'}/>
-            </div>
-            <div className='w-[49%]'>
-              <Box inputName={'Email Address'} placeholder={'amelia.watson@eshop.com'}/>
-            </div>
-            <div className='w-full'>
-              <Box inputName={'Message'} placeholder={'Enter your message ...'} type={'textarea'}/>
-            </div>
+            <div className=' mt-8'>
+                <button className='foont-["Montserrat"] bg-[#FF624C] text-white leading-[30px] text-base font-bold py-4 px-10 capitalize rounded-[10px]'>submit</button>
+              </div>
           </div>
         
         <div className=' h-[540px] mt-[136px] pl-10 py-10  bg-[#F4F4F4] rounded-[25px] w-[30%]'>
